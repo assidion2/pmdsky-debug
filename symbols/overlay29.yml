@@ -1502,6 +1502,8 @@ overlay29:
         JP: 0x22EBA90
       description: |-
         Calling this function with r0 = 6 (or its duplicates in the switch statement) will normally close the minimap, while r0 = 0 will reopen it.
+
+        Closing it requires some additional function calls if the alert box is open (see CloseMinimap's code).
         
         When called in certain places, the function will crash the game instead?
         
@@ -2373,6 +2375,15 @@ overlay29:
         r0: x
         r1: y
         return: true if there was a hidden trap to reveal
+    - name: CheckBossFightVictory
+      address:
+        EU: 0x22F0178
+      description: |-
+        Checks if the boss fight should be marked as won after the given entity has fainted.
+        
+        r0: fainted entity
+        r1: behavior of fainted monster (the function will do nothing if it's not a fixed room enemy)
+        r2: whether to change the music if the boss fight is over
     - name: ShouldRunMonsterAi
       address:
         EU: 0x22F03A0
@@ -10567,6 +10578,13 @@ overlay29:
         r2: Option that the cursor will be on by default. 0 for "Yes", 1 for "No"
         r3: ?
         return: True if the user chooses "Yes", false if the user chooses "No"
+    - name: CloseMinimap
+      address:
+        EU: 0x234E158
+      description: |-
+        Closes the minimap.
+        
+        No params.
     - name: DisplayMessageInternal
       address:
         EU: 0x234E190

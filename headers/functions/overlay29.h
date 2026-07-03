@@ -222,6 +222,8 @@ void ChangeTrapOnTile(struct tile* tile, enum trap_id trap_id);
 int SpawnMonstersAroundPos(struct entity* monster, struct position* pos, uint8_t num_enemies);
 void RevealTrapsNearby(struct entity* monster);
 bool RevealTrapAtPos(int x, int y);
+void CheckBossFightVictory(struct entity* fainted_entity, enum monster_behavior behavior,
+                     bool change_music);
 bool ShouldRunMonsterAi(struct entity* monster);
 bool DebugRecruitingEnabled(void);
 void TryActivateIqBooster(void);
@@ -1088,6 +1090,7 @@ int GetPersonalityIndex(struct monster* monster);
 void DisplayMessage(struct portrait_params* portrait, int message_id, bool wait_for_input);
 void DisplayMessage2(struct portrait_params* portrait, int message_id, bool wait_for_input);
 bool YesNoMenu(undefined param_1, int string_id, int default_option, undefined param_4);
+void CloseMinimap(void);
 void DisplayMessageInternal(int message_id, bool wait_for_input, struct portrait_params* portrait,
                             undefined4 param_4, undefined4 param_5, undefined4 param_6);
 void PrintMissionCompleteString(int string_id, undefined4 param_2, undefined4 param_3,
