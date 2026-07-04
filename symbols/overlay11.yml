@@ -1503,7 +1503,7 @@ overlay11:
         NA: 0x22FF21C
         JP: 0x2300888
       description: |-
-        Seems to be the entry_point for a "mini-overlay" overlay_load_entry that lives in overlay 11, that controls eating gummis in the overworld. 
+        Seems to be the entry_point for a "mini-overlay" menu_load_entry that lives in overlay 11, that controls eating gummis in the overworld. 
         
         return: undefined4
     - name: EatOverworldGummiDestructor
@@ -1512,7 +1512,7 @@ overlay11:
         NA: 0x22FF31C
         JP: 0x2300988
       description: |-
-        Seems to be the destructor for a "mini-overlay" overlay_load_entry that lives in overlay 11, that controls eating gummis in the overworld.
+        Seems to be the destructor for a "mini-overlay" menu_load_entry that lives in overlay 11, that controls eating gummis in the overworld.
         
         No params.
     - name: EatOverworldGummiFrameUpdate
@@ -1521,7 +1521,7 @@ overlay11:
         NA: 0x22FF358
         JP: 0x23009C4
       description: |-
-        Seems to be the frame_update for a "mini-overlay" overlay_load_entry that lives in overlay 11, that controls eating gummis in the overworld.
+        Seems to be the frame_update for a "mini-overlay" menu_load_entry that lives in overlay 11, that controls eating gummis in the overworld.
         
         return: undefined4
     - name: CreateTopGroundMenu
@@ -1557,7 +1557,7 @@ overlay11:
         NA: 0x230119C
         JP: 0x23027F0
       description: |-
-        Seems to be the entry_point for a "mini-overlay" overlay_load_entry that lives in overlay 11, which controls the others menu in ground mode.
+        Seems to be the entry_point for a "mini-overlay" menu_load_entry that lives in overlay 11, which controls the others menu in ground mode.
         
         return: undefined4
     - name: GroundBagOthersMenuDestructor
@@ -1566,7 +1566,7 @@ overlay11:
         NA: 0x2301220
         JP: 0x2302874
       description: |-
-        Seems to be the destructor for a "mini-overlay" overlay_load_entry that lives in overlay 11, which controls the others menu in ground mode.
+        Seems to be the destructor for a "mini-overlay" menu_load_entry that lives in overlay 11, which controls the others menu in ground mode.
         
         No params.
     - name: GroundBagOthersMenuFrameUpdate
@@ -1575,7 +1575,7 @@ overlay11:
         NA: 0x230125C
         JP: 0x23028B0
       description: |-
-        Seems to be the frame_update for a "mini-overlay" overlay_load_entry that lives in overlay 11, which controls the others menu in ground mode.
+        Seems to be the frame_update for a "mini-overlay" menu_load_entry that lives in overlay 11, which controls the others menu in ground mode.
         
         return: undefined4
     - name: InitDiaryAndFaqBoardMenu
@@ -1659,13 +1659,177 @@ overlay11:
         
         r0: switch case index for the function: 0 = Swap List Inventory, 1 = Unknown, 2 = Species Exclusive Item List, 3 = Item Trade Away Selection List.
         r1: Depends on r0. If case 2: ID of the monster to retrieve an exclusive item list for. If case 3: Number of Exclusive Items the player owns.
-    - name: LoadRecycleShopOverlay
+    - name: LoadDuskullBankOverlay
+      address:
+        EU: 0x230D54C
+        NA: 0x230CBB0
+        JP: 0x230E15C
+      description: |-
+        Seems to handle loading overlay 15 for the duskull bank.
+        
+        No params.
+    - name: LoadLuminousSpringOverlay
+      address:
+        EU: 0x230D560
+        NA: 0x230CBC4
+        JP: 0x230E170
+      description: |-
+        Seems to handle loading overlay 16 for luminous spring.
+        
+        No params.
+    - name: LoadChimechoAssemblyOverlay
+      address:
+        EU: 0x230D574
+        NA: 0x230CBD8
+        JP: 0x230E184
+      description: |-
+        Seems to handle loading overlay 17 for the chimecho assembly.
+        
+        r0: undefined4
+    - name: LoadElectivireLinkShopOverlay
+      address:
+        EU: 0x230D59C
+        NA: 0x230CC00
+        JP: 0x230E1AC
+      description: |-
+        Seems to handle loading overlay 18 for the electivire link shop.
+        
+        r0: undefined4
+    - name: LoadSpindaCafeOverlayInit
+      address:
+        EU: 0x230D5C4
+        NA: 0x230CC28
+        JP: 0x230E1D4
+      description: |-
+        Seems to handle loading overlay 19 for initializing the spinda cafe.
+        
+        No params.
+    - name: LoadSpindaCafeOverlayResume
+      address:
+        EU: 0x230D5E8
+        NA: 0x230CC4C
+        JP: 0x230E1F8
+      description: |-
+        Seems to handle loading overlay 19 for resuming operations of the spinda cafe.
+        
+        No params.
+    - name: IsSpindaCafeOverlaySuspended
+      address:
+        EU: 0x230D60C
+        NA: 0x230CC70
+        JP: 0x230E21C
+      description: |-
+        Checks SPINDA_CAFE_OVERLAY_STATUS for if the Spinda Cafe is inactive.
+        
+        return: 1 if the cafe is suspended, 0 if not.
+    - name: LoadRecycleShopOverlayInit
+      address:
+        EU: 0x230D61C
+        NA: 0x230CC80
+        JP: 0x230E22C
+      description: |-
+        Seems to handle loading overlay 20 for initializing the recycle shop.
+        
+        No params.
+    - name: LoadRecycleShopOverlayResume
+      address:
+        EU: 0x230D644
+        NA: 0x230CCA8
+        JP: 0x230E254
+      description: |-
+        Seems to handle loading overlay 20 for resuming operations of the recycle shop.
+        
+        No params.
+    - name: IsRecycleShopOverlaySuspended
+      address:
+        EU: 0x230D67C
+        NA: 0x230CCE0
+        JP: 0x230E28C
+      description: |-
+        Checks RECYCLE_SHOP_OVERLAY_STATUS for if the recycle shop is inactive.
+        
+        return: 1 if the recycle shop is suspended, 0 if not.
+    - name: LoadCroagunkSwapShopOverlay
+      address:
+        EU: 0x230D6E4
+        NA: 0x230CD48
+        JP: 0x230E2F4
+      description: |-
+        Seems to handle loading overlay 21 for the croagunk swap shop.
+        
+        No params.
+    - name: LoadKecleonShopOverlay
+      address:
+        EU: 0x230D6F8
+        NA: 0x230CD5C
+        JP: 0x230E308
+      description: |-
+        Seems to handle loading overlay 22 for the kecleon brothers shop. Is used by both colors of Kecleon.
+        
+        r0: 1 for purple kecleon, 0 for green kecleon.
+    - name: LoadKangaskhanOverlay
+      address:
+        EU: 0x230D720
+        NA: 0x230CD84
+        JP: 0x230E330
+      description: |-
+        Seems to handle loading overlay 23 for Kangaskhan storage, as well as Kangaskhan rock storage. 
+        
+        r0: 2 for kangaskhan rock, 0 otherwise?
+    - name: LoadChanseyDaycareOverlay
+      address:
+        EU: 0x230D740
+        NA: 0x230CDA4
+        JP: 0x230E350
+      description: |-
+        Seems to handle loading overlay 24 for the Chansey daycare.
+        
+        No params.
+    - name: LoadXatuAppraisalOverlay
+      address:
+        EU: 0x230D754
+        NA: 0x230CDB8
+        JP: 0x230E364
+      description: |-
+        Seems to handle loading overlay 24 for Xatu's appraisal.
+        
+        No params.
+    - name: LoadMissionRewardOverlay
+      aliases:
+        - LoadRecycleShopOverlay
       address:
         EU: 0x230D768
         NA: 0x230CDCC
         JP: 0x230E378
       description: |-
-        Seems to be responsible for loading overlay 20 for the recycle shop.
+        Seems to be responsible for loading overlay 26 for the mission reward sequence.
+        
+        No params.
+    - name: LoadRuleDungeonEffectsOverlay
+      address:
+        EU: 0x230D77C
+        NA: 0x230CDE0
+        JP: 0x230E38C
+      description: |-
+        Seems to be responsible for loading overlay 26 to handle rule dungeon effects.
+        
+        No params.
+    - name: LoadSpecialEpisodeDiscardOverlay1
+      address:
+        EU: 0x230D7CC
+        NA: 0x230CE30
+        JP: 0x230E3DC
+      description: |-
+        Seems to load overlay 27, which is believed to handle special episode discarding.
+        
+        No params.
+    - name: LoadSpecialEpisodeDiscardOverlay2
+      address:
+        EU: 0x230D7E0
+        NA: 0x230CE44
+        JP: 0x230E3F0
+      description: |-
+        Seems to load overlay 27, which is believed to handle special episode discarding.
         
         No params.
     - name: HandleControlsTopScreenGround
@@ -2055,7 +2219,7 @@ overlay11:
         - function pointer to destructor
         - possibly function pointer to frame-update function?
         
-        type: struct overlay_load_entry[21]
+        type: struct menu_load_entry[21]
     - name: OV11_STATIC_INITIALIZER
       address:
         EU: 0x2325790
@@ -2102,6 +2266,8 @@ overlay11:
         JP: 0x2326300
       length:
         EU: 0x4
+        NA: 0x4
+        JP: 0x4
       description: "Pointer to the exclusive_item_requirements struct, used by the swap shop."
     - name: SWAP_SHOP_INVENTORY_PTRS
       address:
@@ -2110,7 +2276,35 @@ overlay11:
         JP: 0x2326304
       length:
         EU: 0x8
+        NA: 0x8
+        JP: 0x8
       description: Host pointers to multiple structures used for performing internal Swap Shop checks.
+    - name: SPINDA_CAFE_OVERLAY_STATUS
+      address:
+        EU: 0x23258EC
+        NA: 0x2324DAC
+        JP: 0x232630C
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: |-
+        Tracks whether or not the spinda cafe overlay is suspended. 1 if it is inactive, 0 if it is active.
+        
+        type: int
+    - name: RECYCLE_SHOP_OVERLAY_STATUS
+      address:
+        EU: 0x23258F4
+        NA: 0x2324DB4
+        JP: 0x2326314
+      length:
+        EU: 0x4
+        NA: 0x4
+        JP: 0x4
+      description: |-
+        Tracks whether or not the recycle shop overlay is suspended. 1 if it is inactive, 0 if it is active.
+        
+        type: int
     - name: WORLD_MAP_MODE
       address:
         EU: 0x2325924
@@ -2119,4 +2313,5 @@ overlay11:
       length:
         EU: 0x4
         NA: 0x4
+        JP: 0x4
       description: The current world map

@@ -28,11 +28,13 @@ extern char SWAP_SHOP_UNCENTER_TEXT_TAG_STR[5];
 extern char SWAP_SHOP_CLUMSET_ONE_STAR_STR[21];
 extern char SWAP_SHOP_CLUMSET_TWO_STAR_STR[27];
 extern char SWAP_SHOP_CLUMSET_THREE_STAR_STR[33];
-extern struct overlay_load_entry OVERLAY11_OVERLAY_LOAD_TABLE[21];
+extern struct menu_load_entry OVERLAY11_OVERLAY_LOAD_TABLE[21];
 extern undefined4 OV11_STATIC_INITIALIZER;
 extern struct main_ground_data GROUND_STATE_PTRS;
 extern struct exclusive_item_requirements* EXCLUSIVE_ITEM_REQUIREMENTS_PTR;
 extern struct swap_shop_inventory_ptrs SWAP_SHOP_INVENTORY_PTRS;
+extern int SPINDA_CAFE_OVERLAY_STATUS;
+extern int RECYCLE_SHOP_OVERLAY_STATUS;
 extern uint32_t WORLD_MAP_MODE;
 
 #endif

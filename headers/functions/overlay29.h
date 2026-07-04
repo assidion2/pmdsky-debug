@@ -350,6 +350,7 @@ void GetOutlawSpawnData(struct spawned_target_data* outlaw);
 bool ExecuteMonsterAction(struct entity* monster);
 void TryActivateFlashFireOnAllMonsters(void);
 bool HasStatusThatPreventsActing(struct entity* monster);
+bool HasStatusThatPreventsLeaderActing(struct entity* monster);
 enum mobility_type GetMobilityTypeCheckSlip(enum monster_id species, bool walk_on_water);
 enum mobility_type GetMobilityTypeCheckSlipAndFloating(struct entity* monster,
                                                        enum monster_id species);
@@ -679,6 +680,7 @@ bool TryInflictMiracleEyeStatus(struct entity* user, struct entity* target, bool
 void TryInflictMagnetRiseStatus(struct entity* user, struct entity* target);
 bool IsFloating(struct entity* entity);
 void SetTwoTurnInvincibility(struct entity* target, enum two_turn_invincibility value);
+void EndTwoTurnMove(struct entity* entity);
 void SetReflectStatus(struct entity* user, struct entity* target, enum status_reflect_id status);
 void TryInflictSafeguardStatus(struct entity* user, struct entity* target);
 void TryInflictMistStatus(struct entity* user, struct entity* target);
