@@ -10563,7 +10563,7 @@ overlay29:
         r2: Screen to fade
     - name: WaitUntilFadeIsFinished
       address:
-        EU: 0x234D334
+        EU: 0x234D338
       description: |-
         Waits in a loop until the screen fade on the given screen is finished.
         
