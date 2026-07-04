@@ -1079,6 +1079,7 @@ void LogMessageById(struct entity* user, int message_id, bool show_popup);
 bool AlertBoxIsActive(void);
 bool AlertBoxIsScrolling(void);
 void WaitUntilAlertBoxTextIsLoaded(undefined param_1);
+void WaitUntilAlertBoxPauseIsOver(undefined param_1);
 void InitPortraitDungeon(struct portrait_params* portrait, enum monster_id monster_id,
                          enum portrait_emotion emotion);
 void OpenMessageLog(undefined4 param_1, undefined4 param_2);
