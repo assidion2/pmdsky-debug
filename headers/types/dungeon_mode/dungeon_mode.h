@@ -526,7 +526,7 @@ struct monster {
     struct position pixel_pos;  // 0x182: The monster's graphical position on screen?
     undefined field_0x186;
     undefined field_0x187;
-    int elevation_mirror;       // 0x188: Mirror of the elevation field in struct entity
+    int elevation_mirror; // 0x188: Mirror of the elevation field in struct entity
     // 0x18C: Bitflags that cause non-damaging exclusive items to trigger on the
     // attacker after they have completed their move. For example, the Eclipse Robe
     // (Darkrai exclusive item) may afflict attacking enemies with the nightmare
