@@ -6674,6 +6674,17 @@ overlay29:
         
         r0: target entity pointer
         r1: two_turn_move_invincible value
+    - name: BeginChargedMove
+      address:
+        EU: 0x23197B8
+      description: |-
+        Begins the given charged move for the target entity.
+        
+        r0: user entity pointer
+        r1: target entity pointer (always the same)
+        r2: status id
+        r3: move pointer
+        stack[0]: string to log as the message
     - name: EndTwoTurnMove
       address:
         EU: 0x23197B8
