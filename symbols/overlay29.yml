@@ -6678,14 +6678,14 @@ overlay29:
       address:
         EU: 0x2319534
       description: |-
-        Waits until the monster has flown offscreen (used for the effect of Seismic Toss and moves like Fly/Bounce).
+        Waits in a loop until the monster has flown offscreen (used for the effect of Seismic Toss and moves like Fly/Bounce).
         
         r0: entity pointer
     - name: WaitUntilMonsterIsBackOnGround
       address:
         EU: 0x23195A8
       description: |-
-        Waits until the monster is back on the ground (used for the effect of Seismic Toss).
+        Waits in a loop until the monster is back on the ground (used for the effect of Seismic Toss).
         
         r0: entity pointer
     - name: BeginChargedMove
@@ -10561,6 +10561,13 @@ overlay29:
         r0: Fade type
         r1: Change of brightness per frame
         r2: Screen to fade
+    - name: WaitUntilFadeIsFinished
+      address:
+        EU: 0x234D334
+      description: |-
+        Waits in a loop until the screen fade on the given screen is finished.
+        
+        r0: enum screen
     - name: HandleFadesDungeon
       address:
         EU: 0x234D3D4

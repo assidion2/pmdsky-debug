@@ -1086,6 +1086,7 @@ bool RunDungeonMode(undefined4* param_1, undefined4 param_2);
 void StartFadeDungeon(struct dungeon_fade* fstruct, int delta_delta_brightness,
                       enum fade_status_dungeon fade_type);
 void StartFadeDungeonWrapper(int fade_type, int delta_delta_brightness, enum screen screen);
+void WaitUntilScreenFadeIsFinished(enum screen screen);
 void HandleFadesDungeon(enum screen screen);
 void HandleFadesDungeonBothScreens();
 bool DisplayFloorTip(void);
