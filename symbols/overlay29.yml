@@ -10454,6 +10454,10 @@ overlay29:
         
         r0: user entity pointer
         r1: message string
+    - name: GetAlertBoxLoadingStatus
+      address:
+        EU: 0x234C0F4
+      description: "return: message_log_info->alert_box_info::loading_status"
     - name: LogMessage
       address:
         EU: 0x234C108

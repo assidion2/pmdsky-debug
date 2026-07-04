@@ -1074,6 +1074,7 @@ void LogMessageByIdWithPopupCheckUserUnknown(struct entity* user, undefined4* pa
                                              int message_id);
 void LogMessageByIdWithPopup(struct entity* user, int message_id);
 void LogMessageWithPopup(struct entity* user, const char* message);
+int GetAlertBoxLoadingStatus(void);
 void LogMessage(struct entity* user, const char* message, bool show_popup);
 void LogMessageById(struct entity* user, int message_id, bool show_popup);
 bool AlertBoxIsActive(void);
