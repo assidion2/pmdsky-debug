@@ -10512,7 +10512,7 @@ overlay29:
         - The alert box has less than 180 frames until closing (countdown starts at 240 in LogMessage)
         - Both A and B are held
         - A key on the d-pad (up, down, left, right) is pressed
-
+        
         There is also a check for if the loop passes 240 iterations, but in practice the first condition above will always come first.
         
         r0: value to pass to AdvanceFrame (unused by the function)
