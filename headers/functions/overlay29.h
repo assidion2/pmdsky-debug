@@ -680,6 +680,8 @@ bool TryInflictMiracleEyeStatus(struct entity* user, struct entity* target, bool
 void TryInflictMagnetRiseStatus(struct entity* user, struct entity* target);
 bool IsFloating(struct entity* entity);
 void SetTwoTurnInvincibility(struct entity* target, enum two_turn_invincibility value);
+void WaitUntilMonsterFliesOffscreen(struct entity* entity);
+void WaitUntilMonsterIsBackOnGround(struct entity* entity);
 void BeginChargedMove(struct entity* user, struct entity* target, enum status_two_turn_id status,
                       struct move* move, char* message);
 void EndTwoTurnMove(struct entity* entity);

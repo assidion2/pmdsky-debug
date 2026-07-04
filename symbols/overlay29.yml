@@ -6674,6 +6674,20 @@ overlay29:
         
         r0: target entity pointer
         r1: two_turn_move_invincible value
+    - name: WaitUntilMonsterFliesOffscreen
+      address:
+        EU: 0x2319534
+      description: |-
+        Waits until the monster has flown offscreen (used for the effect of Seismic Toss and moves like Fly/Bounce).
+        
+        r0: entity pointer
+    - name: WaitUntilMonsterIsBackOnGround
+      address:
+        EU: 0x23195A8
+      description: |-
+        Waits until the monster is back on the ground (used for the effect of Seismic Toss).
+        
+        r0: entity pointer
     - name: BeginChargedMove
       address:
         EU: 0x231961C
