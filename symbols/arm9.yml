@@ -7976,6 +7976,8 @@ arm9:
         
         r0: struct inventory_menu_input_ctx
     - name: MenuLoadEntriesEqual
+      aliases:
+        - OverlayLoadEntriesEqual
       address:
         EU: 0x2034A94
         NA: 0x20347A0
@@ -14355,6 +14357,8 @@ arm9:
         
         Additionally, width and height are 0, and will be computed in CreateTeamSelectionMenu.
     - name: NULL_MENU_LOAD_ENTRY
+      aliases:
+        - NULL_OVERLAY_LOAD_ENTRY
       address:
         EU: 0x209B5C8
         NA: 0x209B08C

@@ -1504,7 +1504,7 @@ overlay29:
         JP: 0x22EBA90
       description: |-
         Calling this function with r0 = 6 (or its duplicates in the switch statement) will normally close the minimap, while r0 = 0 will reopen it.
-
+        
         Closing it requires some additional function calls if the alert box is open (see CloseMinimap's code).
         
         When called in certain places, the function will crash the game instead?
@@ -3686,7 +3686,7 @@ overlay29:
         EU: 0x22FFE20
       description: |-
         Returns true if the monster has any status problem that prevents it from acting as the leader.
-
+        
         Also executes the monster's two-turn move if it is charging one.
         
         r0: Entity pointer
