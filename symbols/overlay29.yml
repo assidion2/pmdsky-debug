@@ -6676,7 +6676,7 @@ overlay29:
         r1: two_turn_move_invincible value
     - name: BeginChargedMove
       address:
-        EU: 0x23197B8
+        EU: 0x231961C
       description: |-
         Begins the given charged move for the target entity.
         
