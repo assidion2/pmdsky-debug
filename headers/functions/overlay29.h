@@ -623,6 +623,7 @@ void RevealStairs(struct entity* user, struct entity* target);
 void RevealEnemies(struct entity* user, struct entity* target);
 bool TryInflictLeechSeedStatus(struct entity* user, struct entity* target, bool log_failure,
                                bool check_only);
+void EndLeechSeedStatusForAllTargets(struct entity* user);
 void TryInflictDestinyBondStatus(struct entity* user, struct entity* target);
 void TryInflictSureShotStatus(struct entity* user, struct entity* target, uint8_t turns);
 void TryInflictWhifferStatus(struct entity* user, struct entity* target, uint8_t turns,

@@ -6133,6 +6133,13 @@ overlay29:
         r2: flag to log a message on failure
         r3: flag to only perform the check for inflicting without actually inflicting
         return: Whether or not the status could be inflicted
+    - name: EndLeechSeedStatusForAllTargets
+      address:
+        EU: 0x2316434
+      description: |-
+        Ends the Leech Seed status for all monsters that the given monster gave the status to.
+        
+        r0: user entity pointer
     - name: TryInflictDestinyBondStatus
       address:
         EU: 0x23164B0
