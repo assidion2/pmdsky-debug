@@ -11843,7 +11843,7 @@ overlay29:
         EU: 0x2353E4C
       length:
         EU: 0x4
-      description: List that holds the string IDs for a monster being defeated (0 is "was defeated!", 1 is "fainted!")
+      description: List that holds the string IDs for a monster being defeated (0 is 'was defeated!', 1 is 'fainted!')
     - name: GUMMI_LIKE_STRING_IDS
       address:
         EU: 0x2353EE0
