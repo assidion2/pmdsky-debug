@@ -3990,6 +3990,14 @@ overlay29:
         
         r0: entity pointer
         return: bool
+    - name: HasStatusThatPreventsOutlawEscaping
+      address:
+        EU: 0x2301530
+      description: |-
+        Checks if a monster has a status (any kind of sleep or status under status_frozen) that prevents it from escaping as an outlaw.
+        
+        r0: entity pointer
+        return: bool
     - name: CheckVariousStatuses2
       address:
         EU:
@@ -10214,6 +10222,13 @@ overlay29:
         Handles the fanfare for completing the mission, runs TryCompleteMission, and calls MissionExitPrompt.
         
         No params.
+    - name: TryOutlawEscapeFloor
+      address:
+        EU: 0x234B890
+      description: |-
+        Checks if the monster is a fleeing outlaw and if so, whether it can escape the floor if it is standing on the stairs.
+
+        r0: entity pointer
     - name: TeleportFleeingOutlaw
       address:
         EU: 0x234BAA4
