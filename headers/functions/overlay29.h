@@ -1048,7 +1048,7 @@ void GenerateMissionEggMonster(struct mission* mission);
 struct entity* GetFirstExperienceLockedTeamMember(void);
 void TryCompleteMission(undefined param_1, undefined param_2);
 void TreasureMemoComplete(void);
-void TryOutlawEscapeFloor(struct entity* entity);
+void TryFleeingOutlawEscapeFloor(struct entity* entity);
 void TeleportFleeingOutlaw(void);
 void InitAlertBoxInfo(void);
 void FreeAlertBoxInfo(void);

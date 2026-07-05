@@ -10222,12 +10222,12 @@ overlay29:
         Handles the fanfare for completing the mission, runs TryCompleteMission, and calls MissionExitPrompt.
         
         No params.
-    - name: TryOutlawEscapeFloor
+    - name: TryFleeingOutlawEscapeFloor
       address:
         EU: 0x234B890
       description: |-
         Checks if the monster is a fleeing outlaw and if so, whether it can escape the floor if it is standing on the stairs.
-
+        
         r0: entity pointer
     - name: TeleportFleeingOutlaw
       address:
