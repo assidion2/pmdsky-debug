@@ -3990,14 +3990,6 @@ overlay29:
         
         r0: entity pointer
         return: bool
-    - name: HasStatusThatPreventsOutlawEscaping
-      address:
-        EU: 0x2301530
-      description: |-
-        Checks if a monster has a status (any kind of sleep or status under status_frozen) that prevents it from escaping as an outlaw.
-        
-        r0: entity pointer
-        return: bool
     - name: CheckVariousStatuses2
       address:
         EU:
@@ -4016,6 +4008,14 @@ overlay29:
         
         r0: Entity pointer
         r1: If true, return 1 if entity is blinded
+        return: bool
+    - name: HasStatusThatPreventsOutlawEscaping
+      address:
+        EU: 0x2301530
+      description: |-
+        Checks if a monster has a status (any kind of sleep or status under status_frozen) that prevents it from escaping as an outlaw.
+        
+        r0: entity pointer
         return: bool
     - name: CheckVariousConditions
       address:
