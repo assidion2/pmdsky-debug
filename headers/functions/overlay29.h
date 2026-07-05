@@ -236,6 +236,7 @@ bool TalkToSecretBazaarNpcWithYesNoMenu(int string_id, struct entity* shopkeeper
                                         struct simple_menu_id_item* menu_items);
 void MakeTargetFaceUserAndIdle(struct entity* target, struct entity* user);
 void SubtractMoneyCarriedWithSfx(int amount);
+void ReopenMinimap(void);
 void GonePebbleGradualPaletteShift(struct rgba* palette, uint32_t param_2);
 bool TalkToSecretBazaarNpc(int string_id, struct entity* shopkeeper, enum portrait_emotion emotion,
                            struct simple_menu_id_item* menu_items, bool param_5);

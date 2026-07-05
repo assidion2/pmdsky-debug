@@ -2492,6 +2492,13 @@ overlay29:
         Subtracts the amount of money from the the player's current amount of money and plays the sound effect for buying an item.
         
         r0: money amount
+    - name: ReopenMinimap
+      address:
+        EU: 0x22F11FC
+      description: |-
+        Reopens the minimap if the option to hide it is not set.
+        
+        No params.
     - name: GonePebbleGradualPaletteShift
       address:
         EU: 0x22F1210
