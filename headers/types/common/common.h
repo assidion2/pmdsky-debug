@@ -1269,7 +1269,7 @@ ASSERT_SIZE(struct monster_file_contents, 78548);
 
 // Master struct for controlling the game's menus.
 struct menu_control {
-    // 0x0: An menu_load_entry with all zeroes. Doesn't seem to be used for anything.
+    // 0x0: A menu_load_entry with all zeroes. Doesn't seem to be used for anything.
     struct menu_load_entry null_entry;
     // 0x10: Whether to load a new menu on the next call of HandleMenus
     bool load_new_menu;
