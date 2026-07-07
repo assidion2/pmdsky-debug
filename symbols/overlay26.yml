@@ -58,7 +58,7 @@ overlay26:
         JP: 0x238BED0
       description: |-
         Just a guess. See ApplyRuleDungeonEffectsFrameUpdate for further explanation.
-        Is an entry_point for an menu_load_entry.
+        Is an entry_point for a menu_load_entry.
         
         r0: undefined4
         r1: undefined4
