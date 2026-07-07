@@ -139,7 +139,7 @@ overlay26:
         NA: 0x238AC40
         JP: 0x238C1A0
       description: |-
-        Is an unidentified destructor for an menu_load_entry.
+        Is an unidentified destructor for a menu_load_entry.
         
         No params.
     - name: UnkOv26FrameUpdateEu0238b7ac
