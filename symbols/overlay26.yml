@@ -158,7 +158,7 @@ overlay26:
         JP: 0x238C238
       description: |-
         Seems to get called on exiting a dungeon. Might be exclusive to whether the dungeon is not in mission mode?
-        Is an entry_point for an menu_load_entry.
+        Is an entry_point for a menu_load_entry.
         
         r0: undefined4
         r1: undefined4
