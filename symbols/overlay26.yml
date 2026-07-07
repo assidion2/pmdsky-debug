@@ -148,7 +148,7 @@ overlay26:
         NA: 0x238AC6C
         JP: 0x238C1CC
       description: |-
-        Is an unidentified frame_update for an menu_load_entry.
+        Is an unidentified frame_update for a menu_load_entry.
         
         return: undefined4
     - name: DungeonExitEntryPoint2
