@@ -83,7 +83,7 @@ overlay26:
       description: |-
         Just a guess. After enough frames pass, conditionally calls GetMaxItemsAllowed, RemoveAllItemsStartingAt, IsMoneyAllowed, and SetMoneyCarried, 
         as well as a handful of unknown functions that likely check if the entered dungeon is a rule dungeon. 
-        Is a frame_update for an menu_load_entry.
+        Is a frame_update for a menu_load_entry.
         
         return: undefined4
     - name: ExitDungeon1EntryPoint
