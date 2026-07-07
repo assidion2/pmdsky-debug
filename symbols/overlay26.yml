@@ -72,7 +72,7 @@ overlay26:
         JP: 0x238BEFC
       description: |-
         Just a guess. See ApplyRuleDungeonEffectsFrameUpdate for further explanation.
-        Is a destructor for an menu_load_entry.
+        Is a destructor for a menu_load_entry.
         
         No params.
     - name: ApplyRuleDungeonEffectsFrameUpdate
