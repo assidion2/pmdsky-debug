@@ -126,7 +126,7 @@ overlay26:
         NA: 0x238AC14
         JP: 0x238C174
       description: |-
-        Is an unidentified entry_point for an menu_load_entry.
+        Is an unidentified entry_point for a menu_load_entry.
         
         r0: undefined4
         r1: undefined4
