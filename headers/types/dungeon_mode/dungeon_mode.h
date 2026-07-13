@@ -2579,7 +2579,7 @@ struct dungeon_button_input {
 };
 ASSERT_SIZE(struct dungeon_button_input, 14);
 
-struct secret_bazaar_dialogue_info {
+struct dungeon_dialogue_info {
     undefined field_0x0[16];
     int8_t dialogue_window_id;     // 0x10
     int8_t menu_window_id;         // 0x11
@@ -2601,7 +2601,7 @@ struct secret_bazaar_dialogue_info {
     struct simple_menu_id_item* menu_items; // 0x470
     undefined4 field_0x474;
 };
-ASSERT_SIZE(struct secret_bazaar_dialogue_info, 1144);
+ASSERT_SIZE(struct dungeon_dialogue_info, 1144);
 
 // Temporary struct used by TryRecruit.
 struct recruit_info {

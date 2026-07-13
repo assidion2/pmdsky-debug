@@ -2572,7 +2572,7 @@ overlay29:
         r1: shopkeeper entity pointer
         r2: portrait emotion
         r3: pointer to an array of simple_menu_id_items (null if there is no menu)
-        stack[0]: ? (changes something in secret_bazaar_dialogue_info if true. seems to only be true if there is a menu)
+        stack[0]: ? (changes something in dungeon_dialogue_info if true. seems to only be true if there is a menu)
         return: ? (bool)
     - name: GetLeaderAction
       address:
@@ -10890,13 +10890,15 @@ overlay29:
         r2: ?
         r3: ?
         stack[0]: ?
-    - name: InitSecretBazaarDialogueInfo
+    - name: InitDungeonDialogueInfo
+      aliases:
+        - InitSecretBazaarDialogueInfo
       address:
         EU: 0x234E758
         NA: 0x234DB58
         JP: 0x234EDE4
       description: |-
-        Initializes the struct pointed to by SECRET_BAZAAR_DIALOGUE_INFO_PTR.
+        Initializes the struct pointed to by DUNGEON_DIALOGUE_INFO_PTR.
         
         No params.
     - name: OpenMenu
