@@ -3154,8 +3154,6 @@ overlay29:
         r1: iq boost
         r2: bool suppress logs
     - name: MakeMonsterIdleInDirection2
-      aliases:
-        - ChangeMonsterAnimationToIdle
       address:
         EU: 0x22FAD6C
         NA: 0x22FA360
@@ -3815,7 +3813,7 @@ overlay29:
         return: True if the monster can move through walls.
     - name: CannotStandOnTile
       address:
-        EU: 
+        EU:
           - 0x2300384
           - 0x23006C8
         NA: 0x22FFC9C

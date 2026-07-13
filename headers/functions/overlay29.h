@@ -449,8 +449,9 @@ void AnimateFlyingMoves(struct entity* entity);
 void ChangeMonsterAnimation(struct entity* monster, int8_t animation_id,
                             enum direction_id direction);
 void ChangeMonsterAnimationToIdle(struct entity* monster, enum direction_id direction);
-void MakeMonsterIdleInDirection(struct entity* entity, enum direction_id direction);
+void ChangeMonsterAnimationToHurt(struct entity* monster, enum direction_id direction);
 uint8_t GetIdleAnimationId(struct entity* entity);
+void MakeMonsterIdleInDirection(struct entity* entity, enum direction_id direction);
 void DetermineAllMonsterShadow(void);
 enum shadow_type DetermineMonsterShadow(struct entity* monster);
 bool DisplayActions(struct entity* param_1);
@@ -1018,8 +1019,8 @@ void AddHeldItemToBag(struct monster* monster);
 void RemoveEmptyItemsInBagWrapper(void);
 void GenerateItem(struct item* item, enum item_id item_id, uint16_t quantity,
                   enum gen_item_stickiness sticky_type);
-void HandleRegularProjectileThrow(struct entity* user, struct item* item, struct position* start_pos,
-                                  enum direction dir,
+void HandleRegularProjectileThrow(struct entity* user, struct item* item,
+                                  struct position* start_pos, enum direction dir,
                                   struct projectile_throw_info* projectile_throw_info);
 void HandleCurvedProjectileThrow(struct entity* user, struct item* item, struct position* start_pos,
                                  struct position* target_pos,
