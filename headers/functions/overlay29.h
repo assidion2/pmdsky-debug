@@ -1121,7 +1121,8 @@ void DisplayMessage2(struct portrait_params* portrait, int message_id, bool wait
 bool YesNoMenu(undefined param_1, int string_id, int default_option, undefined param_4);
 void CloseMinimap(void);
 void DisplayMessageInternal(int message_id, bool wait_for_input, struct portrait_params* portrait,
-                            undefined4 param_4, undefined4 param_5, undefined4 param_6);
+                            undefined4 param_4, struct preprocessor_args* preprocessor_args,
+                            undefined4 param_6);
 void PrintMissionCompleteString(int string_id, undefined4 param_2, undefined4 param_3,
                                 undefined4 param_4, undefined1 param_5);
 void InitSecretBazaarDialogueInfo(void);

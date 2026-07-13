@@ -10874,7 +10874,7 @@ overlay29:
         r1: True to wait for player input before closing the dialogue box, false to close it automatically once all the characters get printed.
         r2: pointer to the structure representing the desired state of the portrait
         r3: ?
-        stack[0]: ?
+        stack[0]: preprocessor args
         stack[1]: ?
     - name: PrintMissionCompleteString
       address:
