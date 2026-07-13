@@ -1125,7 +1125,7 @@ void DisplayMessageInternal(int message_id, bool wait_for_input, struct portrait
                             undefined4 param_6);
 void PrintMissionCompleteString(int string_id, undefined4 param_2, undefined4 param_3,
                                 undefined4 param_4, undefined1 param_5);
-void InitSecretBazaarDialogueInfo(void);
+void InitDungeonDialogueInfo(void);
 void OpenMenu(undefined param_1, undefined param_2, bool open_bag);
 void StairsMenuAfterStep(struct entity* leader, bool leave_minimap_closed_after);
 int DungeonModeSetupAndShowNameKeyboard(char* str_keyboard_result, char* buffer,
