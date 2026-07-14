@@ -2443,6 +2443,20 @@ overlay29:
         r0: fainted entity
         r1: behavior of fainted monster (the function will do nothing if it's not a fixed room enemy)
         r2: whether to change the music if the boss fight is over
+    - name: ChangeTeamAnimationsToIdle
+      address:
+        EU: 0x22F02EC
+      description: |-
+        Changes the animations of all team members to idle.
+        
+        No params.
+    - name: IsFloorOver2
+      address:
+        EU: 0x22F037C
+      description: |-
+        Same as IsFloorOver, but with a redundant check for end_floor_flag.
+        
+        return: bool
     - name: ShouldRunMonsterAi
       address:
         EU: 0x22F03A0
@@ -2541,6 +2555,13 @@ overlay29:
         Subtracts the amount of money from the the player's current amount of money and plays the sound effect for buying an item.
         
         r0: money amount
+    - name: MakeSecretBazaarNpcsIdleInDirection
+      address:
+        EU: 0x22F119C
+      description: |-
+        Changes the animations of all secret bazaar shopkeepers to idle in the given direction and updates their target_pos field.
+        
+        r0: direction
     - name: ReopenMinimap
       address:
         EU: 0x22F11FC

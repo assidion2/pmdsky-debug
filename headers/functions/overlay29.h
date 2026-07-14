@@ -230,6 +230,8 @@ void RevealTrapsNearby(struct entity* monster);
 bool RevealTrapAtPos(int x, int y);
 void CheckBossFightVictory(struct entity* fainted_entity, enum monster_behavior behavior,
                            bool change_music);
+void ChangeTeamAnimationsToIdle(void);
+bool IsFloorOver2(void);
 bool ShouldRunMonsterAi(struct entity* monster);
 bool DebugRecruitingEnabled(void);
 void TryActivateIqBooster(void);
@@ -242,6 +244,7 @@ bool TalkToSecretBazaarNpcWithYesNoMenu(int string_id, struct entity* shopkeeper
                                         struct simple_menu_id_item* menu_items);
 void MakeTargetFaceUserAndIdle(struct entity* target, struct entity* user);
 void SubtractMoneyCarriedWithSfx(int amount);
+void MakeSecretBazaarNpcsIdleInDirection(enum direction_id dir);
 void ReopenMinimap(void);
 void GonePebbleGradualPaletteShift(struct rgba* palette, uint32_t param_2);
 bool TalkToSecretBazaarNpc(int string_id, struct entity* shopkeeper, enum portrait_emotion emotion,
