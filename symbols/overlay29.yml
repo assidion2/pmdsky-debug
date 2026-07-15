@@ -4705,7 +4705,7 @@ overlay29:
         Does nothing if the provided entity is not a monster.
         
         r0: Entity pointer
-        r2: Direction to turn the monster in, or DIR_NONE to keep the current direction
+        r1: Direction to turn the monster in, or DIR_NONE to keep the current direction
     - name: ChangeMonsterAnimationToHurt
       address:
         EU: 0x23054B0
