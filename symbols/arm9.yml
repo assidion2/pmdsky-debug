@@ -7695,7 +7695,7 @@ arm9:
         return: first item on page
     - name: SetWindowTitle
       address:
-        EU: 0x2030D28
+        EU: 0x2030D20
       description: |-
         Sets the string ID to use for a window's title.
         
