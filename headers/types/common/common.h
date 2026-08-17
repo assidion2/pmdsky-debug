@@ -1660,4 +1660,30 @@ struct unk_storage_struct_0x410 {
 };
 ASSERT_SIZE(struct unk_storage_struct_0x410, 1040);
 
+struct alarm_callback_info {
+    void (*func)(void*);
+    void* arg;
+    uint8_t id;
+    uint8_t pad;
+    uint16_t pad2;
+};
+ASSERT_SIZE(struct alarm_callback_info, 12);
+
+struct effect_animation {
+    enum effect_file_type file_type; // 0x0
+    int file_index;                  // 0x4: File index in pack 3 (effect.bin)
+    int palette_num;                 // 0x8
+    // 0xC: Some sort of index into the file. Related animations are grouped together into the same
+    // file and indexed with this. Is used as the animation_key parameter in
+    // SetAnimationForAnimationControl.
+    int animation_index;
+    int se_id;                // 0x10: Sound effect id, passed to PlaySeByIdVolume
+    int field_0x14;           // 0x14: Seemingly always 0
+    uint8_t is_screen_effect; // 0x18: Seems to always be 1 for screen effects, unused otherwise
+    struct wan_offset_type_8 wan_offset; // 0x19
+    uint8_t is_non_blocking;             // 0x1A: If non-zero, the animation won't pause the game
+    uint8_t repeat; // 0x1B: If non-zero, makes the animation repeat a bunch of times
+};
+ASSERT_SIZE(struct effect_animation, 28);
+
 #endif

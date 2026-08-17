@@ -151,6 +151,8 @@ overlay10:
     - name: LoadPaletteBase
       address:
         EU: 0x22BE09C
+        NA: 0x22BD75C
+        JP: 0x22BEF00
       description: |-
         Loads either the 8bpp or 4bpp palette base (from WAN file 292 or 1, respectively).
         
@@ -158,19 +160,24 @@ overlay10:
         
         r0: sprite index in wan_table to load from
         r1: 0 for 8bpp, 1 for 4bpp
-    - name: GetEffectAnimationField0x19
+        r2: starting palette number for 4bpp
+    - name: GetEffectAnimationWanOffset
+      aliases:
+        - GetEffectAnimationField0x19
       address:
         EU: 0x22BE7F4
         NA: 0x22BDEB4
         JP: 0x22BF658
       description: |-
-        Calls GetEffectAnimation and returns field 0x19.
+        Calls GetEffectAnimation and returns its wan_offset field.
         
         r0: anim_id
-        return: GetEffectAnimation(anim_id)->field_0x19.
+        return: GetEffectAnimation(anim_id)->wan_offset
     - name: ScreenEffectActive
       address:
         EU: 0x22C0228
+        NA: 0x22BF8E8
+        JP: 0x22C108C
       description: |-
         Returns true if a screen effect (like Leaf Storm's or cutscene rain) is currently active on the given screen.
         
