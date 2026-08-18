@@ -64,7 +64,7 @@ int PlayEffectAnimationEntity(struct entity* entity, int effect_id, bool blockin
                               uint16_t* custom_oam_adjustment_info);
 int PlayEffectAnimationPos(struct position* pos, int effect_id, bool blocking);
 int PlayEffectAnimationPixelPos(struct pixel_position* pixel_pos, int effect_id, bool blocking);
-void AnimationDelayOrSomething(undefined param_1);
+void FinishPlayingEffectAnimations(bool wait_for_non_blocking);
 void CopyStatusIconFlags(struct status_icon_flags* dst, struct entity* src);
 void UpdateStatusIconFlags(struct entity* entity);
 void PlayQuestionMarkEffect(struct entity* entity);

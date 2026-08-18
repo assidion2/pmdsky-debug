@@ -817,17 +817,17 @@ overlay29:
         r1: Effect ID
         r2: whether the effect is blocking or not (i.e. whether the function should wait until it is finished or 100 frames have passed to return)
         return: -1 if the animation is finished / exceeded 100 frames, or a unique id for the playing effect otherwise
-    - name: AnimationDelayOrSomething
+    - name: FinishPlayingEffectAnimations
+      aliases:
+        - AnimationDelayOrSomething
       address:
         EU: 0x22E4290
         NA: 0x22E38E0
         JP: 0x22E4F50
       description: |-
-        Called whenever most (all?) animations are played. Does not return until the animation is over.
+        Waits until currently playing effect animations are finished, and returns only when they are done. Might have some other effects too.
         
-        Might wait until the animation is done? Contains several loops that call AdvanceFrame.
-        
-        r0: ?
+        r0: if 0, will only wait until effects with their is_non_blocking field equal to 0 finish; if 1, waits for all effects to finish
     - name: CopyStatusIconFlags
       address:
         EU: 0x22E43F0
