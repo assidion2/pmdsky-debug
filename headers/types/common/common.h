@@ -1681,7 +1681,7 @@ struct effect_animation {
     int field_0x14;           // 0x14: Seemingly always 0
     uint8_t is_screen_effect; // 0x18: Seems to always be 1 for screen effects, unused otherwise
     struct wan_offset_type_8 wan_offset; // 0x19
-    uint8_t is_non_blocking;             // 0x1A: If non-zero, the animation won't pause the game
+    uint8_t is_non_blocking;             // 0x1A
     uint8_t repeat; // 0x1B: If non-zero, makes the animation repeat a bunch of times
 };
 ASSERT_SIZE(struct effect_animation, 28);
