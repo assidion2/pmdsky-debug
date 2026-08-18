@@ -788,7 +788,7 @@ overlay29:
         r1: Effect ID
         r2: whether the effect is blocking or not (i.e. whether the function should wait until it is finished or 100 frames have passed to return)
         r3: WAN offset on entity sprite to use
-        stack[0]: if 2, waits until any in-progress effects are finished before playing the given one
+        stack[0]: if 2, waits until any in-progress effects are finished before playing the given one; if 1, waits only for blocking effects
         stack[1]: whether to still play the effect even if the entity is using a non-flying two-turn move like Dig or Shadow Force
         stack[2]: direction of effect
         stack[3]: custom oam_adjustment_info array for the animation_control struct (length 6, or null if should use default values)
