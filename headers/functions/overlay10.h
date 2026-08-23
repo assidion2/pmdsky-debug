@@ -14,8 +14,11 @@ void UpdateInventoryMenu(struct window* window);
 bool IsInventoryMenuState3(int window_id);
 void CreateInventoryMenuOuter(int n_items, int param_2, int param_3, uint8_t* param_4,
                               undefined* param_5, undefined* param_6, uint32_t param_7);
-void LoadPaletteBase(uint8_t sprite_index, bool is_4bpp);
-int GetEffectAnimationField0x19(int anim_id);
+void LoadPaletteBase(uint8_t sprite_index, bool is_4bpp, uint8_t start_4bpp);
+enum wan_offset_type GetEffectAnimationWanOffset(int anim_id);
+void PlayEffect(struct live_effect* effect, enum screen screen);
+bool DisplayEffect(struct live_effect* effect, struct vec2_16* coords);
+int GetLiveEffectIdx(int unique_id);
 bool ScreenEffectActive(enum screen screen);
 bool BlockingAnimationInProgress(int unique_id);
 struct effect_animation* GetEffectAnimation(int anim_id);
