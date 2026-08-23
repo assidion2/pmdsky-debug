@@ -162,8 +162,6 @@ overlay10:
         r1: 0 for 8bpp, 1 for 4bpp
         r2: starting palette number for 4bpp
     - name: GetEffectAnimationWanOffset
-      aliases:
-        - GetEffectAnimationField0x19
       address:
         EU: 0x22BE7F4
         NA: 0x22BDEB4
