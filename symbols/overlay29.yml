@@ -827,7 +827,7 @@ overlay29:
       description: |-
         Waits until currently playing effect animations are finished, and returns only when they are done. Might have some other effects too.
         
-        r0: if 0, will only wait until effects with an is_non_blocking field equal to 0 finish; if 1, waits for all effects to finish
+        r0: if 0, will only wait until effects with their is_non_blocking field equal to 0 to finish; if 1, waits for all effects to finish
     - name: CopyStatusIconFlags
       address:
         EU: 0x22E43F0
