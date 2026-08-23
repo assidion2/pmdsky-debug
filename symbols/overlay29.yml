@@ -2878,6 +2878,13 @@ overlay29:
         Handles using the regular attack or Struggle by the entity.
         
         r0: entity pointer
+    - name: TriggerThiefAlert
+      address:
+        EU: 0x22F7664
+      description: |-
+        Triggers the sequence for stealing from a Kecleon shop.
+        
+        No params.
     - name: ResetDamageData
       address:
         EU: 0x22F77D0
@@ -4033,6 +4040,15 @@ overlay29:
         r0: monster ID
         r1: tile pointer
         return: true means the monster CANNOT spawn on this tile
+    - name: CannotMoveToTile
+      address:
+        EU: 0x2300190
+      description: |-
+        Same as CannotStandOnTile, but also returns false if the monster is currently on the tile.
+        
+        r0: Entity pointer
+        r1: Tile position pointer
+        return: True if the monster cannot move to the specified tile, false if it can
     - name: GetMobilityTypeAfterIqSkills
       address:
         EU: 0x23002F4
@@ -4053,17 +4069,22 @@ overlay29:
         
         r0: Entity pointer
         return: True if the monster can move through walls.
+    - name: CannotStandOnTileNoMonsterCheck
+      address:
+        EU: 0x2300384
+        NA: 0x22FF958
+        JP: 0x2300D28
+      description: |-
+        Same as CannotStandOnTile, but without the check for another monster on the tile.
+        
+        r0: Entity pointer
+        r1: Tile position pointer
+        return: True if the monster cannot stand on the specified tile, false if it can
     - name: CannotStandOnTile
       address:
-        EU:
-          - 0x2300384
-          - 0x23006C8
-        NA:
-          - 0x22FF958
-          - 0x22FFC9C
-        JP:
-          - 0x2300D28
-          - 0x23010AC
+        EU: 0x23006C8
+        NA: 0x22FFC9C
+        JP: 0x23010AC
       description: |-
         Checks if a given monster cannot stand on the tile at the given position.
         
@@ -4309,6 +4330,14 @@ overlay29:
         
         r0: Entity pointer
         r1: If true, return 1 if entity is blinded
+        return: bool
+    - name: CanBeTalkedTo
+      address:
+        EU: 0x23013F8
+      description: |-
+        Returns true if the monster doesn't have a status that prevents it from being talked to.
+        
+        r0: entity pointer
         return: bool
     - name: HasStatusThatPreventsOutlawEscaping
       address:
@@ -4925,6 +4954,14 @@ overlay29:
         r0: Entity pointer
         r1: ID of the animation to set
         r2: Direction to turn the monster in, or DIR_NONE to keep the current direction
+    - name: MakeMonsterIdleInDirectionIfValid
+      address:
+        EU: 0x230542C
+      description: |-
+        Makes the monster play their idle animation. Also makes them do so in the given direction and sets the direction field of their action struct if the direction parameter is between 0 and 7 (inclusive).
+        
+        r0: entity pointer
+        r1: direction
     - name: ChangeMonsterAnimationToIdle
       address:
         EU: 0x2305474

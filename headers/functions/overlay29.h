@@ -277,6 +277,7 @@ void UseThrowableItem(struct entity* user);
 void TalkToTeamMemberInFront(struct entity* entity);
 void PlayerUseMove(struct entity* entity);
 void UseRegularAttackOrStruggle(struct entity* entity);
+void TriggerThiefAlert(void);
 void ResetDamageData(struct damage_data* damage);
 void FreeLoadedAttackSpriteAndMore(void);
 uint16_t SetAndLoadCurrentAttackAnimation(enum pack_file_id pack_id, uint16_t file_index);
@@ -389,9 +390,11 @@ enum mobility_type GetMobilityTypeCheckSlip(enum monster_id species, bool walk_o
 enum mobility_type GetMobilityTypeCheckSlipAndFloating(struct entity* monster,
                                                        enum monster_id species);
 bool IsInvalidSpawnTile(enum monster_id monster_id, struct tile* tile);
+bool CannotMoveToTile(struct entity* monster, struct position* tile_pos);
 enum mobility_type GetMobilityTypeAfterIqSkills(struct entity* monster,
                                                 enum mobility_type mobility_type);
 bool CanMoveThroughWalls(struct entity* monster);
+bool CannotStandOnTileNoMonsterCheck(struct entity* monster, struct position* tile_pos);
 bool CannotStandOnTile(struct entity* monster, struct position* tile_pos);
 int CalcSpeedStage(struct entity* entity, int counter_weight);
 int CalcSpeedStageWrapper(struct entity* entity);
@@ -414,6 +417,7 @@ bool MonsterHasNegativeStatus(struct entity* monster, bool check_held_item);
 bool IsMonsterSleeping(struct entity* monster);
 bool MonsterHasQuarterHp(struct entity* monster);
 bool CheckVariousStatuses2(struct entity* entity, bool blind_check);
+bool CanBeTalkedTo(struct entity* monster);
 bool HasStatusThatPreventsOutlawEscaping(struct entity* monster);
 bool CheckVariousConditions(struct entity* entity);
 bool CheckVariousStatuses(struct entity* entity);
@@ -475,6 +479,7 @@ void DisplayMonster(struct entity* entity);
 void AnimateFlyingMoves(struct entity* entity);
 void ChangeMonsterAnimation(struct entity* monster, int8_t animation_id,
                             enum direction_id direction);
+void MakeMonsterIdleInDirectionIfValid(struct entity* monster, enum direction_id direction);
 void ChangeMonsterAnimationToIdle(struct entity* monster, enum direction_id direction);
 void ChangeMonsterAnimationToHurt(struct entity* monster, enum direction_id direction);
 uint8_t GetIdleAnimationId(struct entity* entity);

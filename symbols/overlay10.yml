@@ -173,6 +173,32 @@ overlay10:
         
         r0: anim_id
         return: GetEffectAnimation(anim_id)->wan_offset
+    - name: PlayEffect
+      address:
+        EU: 0x22BE900
+      description: |-
+        Fills a live_effect struct's fields with specific effect-related information to begin playback.
+        
+        Note that some initialization must be done first (see callsites).
+        
+        r0: live_effect
+        r1: screen
+    - name: DisplayEffect
+      address:
+        EU: 0x22BFE30
+      description: |-
+        Displays the current frame of an effect animation, also handling playing the sound effect if necessary.
+        
+        r0: live_effect
+        r1: some sort of pixel coordinates (details of use unknown)
+        return: true if the effect's is_non_blocking field is 0, false otherwise
+    - name: GetLiveEffectIdx
+      address:
+        EU: 0x22BF2E0
+      description: |-
+        Gets a live effect's index in EFFECT_CONTROL.live_effects from its unique id.
+        
+        return: index, or -1 if it is not present
     - name: ScreenEffectActive
       address:
         EU: 0x22C0228
