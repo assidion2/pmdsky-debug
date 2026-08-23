@@ -3288,15 +3288,6 @@ overlay29:
         Checks if an entity has the ability Truant, and if so tries to apply the pause status to it.
         
         r0: pointer to entity
-    - name: TryPointCameraToFarOffTeammate
-      address:
-        EU: 0x22FA24C
-      description: |-
-        Attempts to place the camera on top of the specified teammate.
-        
-        If the monster is already onscreen or the far-off pals option is disabled, the function does nothing.
-        
-        r0: entity pointer
     - name: TryPointCameraToMonster
       address:
         EU: 0x22FA2C0
@@ -5274,13 +5265,6 @@ overlay29:
         
         r0: user entity pointer
         r1: target entity pointer
-    - name: ResetTypeChanges
-      address:
-        EU: 0x230870C
-      description: |-
-        Resets any type changes that the given monster has undergone.
-        
-        r0: entity pointer
     - name: EndProtectStatus
       address:
         EU: 0x2308744
