@@ -2878,6 +2878,36 @@ overlay29:
         Handles using the regular attack or Struggle by the entity.
         
         r0: entity pointer
+    - name: GetShopkeeperIfTalkable
+      address:
+        EU: 0x22F6BC8
+      description: |-
+        Returns a pointer to the floor's shopkeeper, or an invalid entity pointer if there is none, they cannot be talked to, or they are not in the same room as the leader.
+        
+        r0: leader pointer
+        return: shopkeeper pointer
+    - name: HandleShopTransaction
+      address:
+        EU: 0x22F6C84
+      description: |-
+        Checks if a Kecleon shop transaction should occur and initiates it if so.
+        
+        r0: whether to attempt a transaction even if the leader is still standing in the shop
+    - name: TrySellToShop
+      address:
+        EU: 0x22F7118
+      description: |-
+        Handles selling to a Kecleon shop.
+        
+        r0: ?
+    - name: TryBuyFromShop
+      address:
+        EU: 0x22F73C4
+      description: |-
+        Handles buying from a Kecleon shop.
+        
+        r0: ?
+        return: 0 if the purchase was successful, 1 or 2 if should be treated as a theft
     - name: TriggerThiefAlert
       address:
         EU: 0x22F7664
@@ -3377,6 +3407,13 @@ overlay29:
         
         r0: monster ID
         return: bool
+    - name: ActivateTerrainEffects
+      address:
+        EU: 0x22FA680
+      description: |-
+        Handles causing the burn from lava, healing a burn from water, and decreasing hunger in the walls.
+        
+        r0: monster entity pointer
     - name: BoostIQ
       address:
         EU: 0x22FAB50
@@ -7941,6 +7978,28 @@ overlay29:
         r3: explosion radius (only works correctly with 1 and 2)
         stack[0]: damage type
         stack[1]: damage source (normally DAMAGE_SOURCE_EXPLOSION)
+    - name: CalcExplosionDamage
+      address:
+        EU: 0x232150C
+      description: |-
+        Calculates and inflicts damage from an explosion.
+        
+        r0: user entity pointer
+        r1: target entity pointer
+        r2: damage type
+        r3: move id
+        stack[0]: base fixed damage for non-teammates
+    - name: CalcAftermathExplosionDamage
+      address:
+        EU: 0x2321634
+      description: |-
+        Calculates and inflicts damage from an aftermath explosion.
+        
+        r0: user entity pointer
+        r1: target entity pointer
+        r2: damage type
+        r3: move id
+        stack[0]: base fixed damage for non-teammates
     - name: TryWarp
       address:
         EU: 0x2321770
@@ -12532,6 +12591,12 @@ overlay29:
       length:
         EU: 0x4
       description: "[Runtime] Used to store the number of positions output by GetPossibleAiArcItemTargets and the number of directions/probabilities output by GetPossibleAiThrownItemDirections."
+    - name: EXPLOSION_FIXED_DAMAGES
+      address:
+        EU: 0x2354300
+      length:
+        EU: 0xC
+      description: "Array of damages indexed by radius for explosion damage (before reductions from exclusive items, etc)."
     - name: EXCL_ITEM_EFFECTS_EVASION_BOOST
       address:
         EU: 0x2354310

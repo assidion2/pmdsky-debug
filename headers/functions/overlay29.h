@@ -277,6 +277,10 @@ void UseThrowableItem(struct entity* user);
 void TalkToTeamMemberInFront(struct entity* entity);
 void PlayerUseMove(struct entity* entity);
 void UseRegularAttackOrStruggle(struct entity* entity);
+struct entity* GetShopkeeperIfTalkable(struct entity* leader);
+void HandleShopTransaction(bool always_transact);
+void TrySellToShop(bool param_1);
+uint8_t TryBuyFromShop(bool param_1);
 void TriggerThiefAlert(void);
 void ResetDamageData(struct damage_data* damage);
 void FreeLoadedAttackSpriteAndMore(void);
@@ -325,6 +329,7 @@ void RestorePpAllMovesSetFlags(struct entity* entity);
 bool CheckTeamMemberIdxVeneer(int member_idx);
 bool CheckMonsterTeamMemberIdx(struct entity* entity);
 bool IsMonsterIdInNormalRangeVeneer(enum monster_id monster_id);
+void ActivateTerrainEffects(struct entity* entity);
 void BoostIQ(struct entity* entity, int iq_boost, bool suppress_logs);
 void MakeMonsterIdleInDirection2(struct entity* entity, enum direction_id direction);
 bool ShouldMonsterHeadToStairs(struct entity* entity);
@@ -815,6 +820,11 @@ void TryExplosion(struct entity* user, struct entity* target, struct position* p
                   enum type_id attack_type, union damage_source damage_source);
 void TryAftermathExplosion(struct entity* user, struct entity* target, struct position* pos,
                            int radius, enum type_id attack_type, union damage_source damage_source);
+void CalcExplosionDamage(struct entity* user, struct entity* target, enum type_id attack_type,
+                         enum move_id move_id, uint32_t base_fixed_damage);
+void CalcAftermathExplosionDamage(struct entity* user, struct entity* target,
+                                  enum type_id attack_type, enum move_id move_id,
+                                  uint32_t base_fixed_damage);
 void TryWarp(struct entity* user, struct entity* target, enum warp_type warp_type,
              struct position* position);
 void EnsureCanStandCurrentTile(struct entity* entity);
