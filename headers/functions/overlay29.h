@@ -89,6 +89,7 @@ void PlayDefensiveStatMultiplierDownEffect(struct entity* entity, int stat_index
 void PlayHitChanceUpEffect(struct entity* entity, int stat_index);
 void PlayHitChanceDownEffect(struct entity* entity, int stat_index);
 void PlaySeByIdIfShouldDisplayEntity(struct entity* entity, int se_id);
+void PlayItemThrowSfx(struct entity* user, enum item_category category);
 void PlayMissSfx(struct entity* attacker, struct entity* defender);
 void PlayStairsSfx(void);
 bool ShouldDisplayEntityAdvanced(struct entity* entity);
@@ -144,6 +145,7 @@ bool FindFarthestUnoccupiedTileWithin2(struct position* pos_out, struct position
                                        bool random_room);
 bool FindUnoccupiedTileWithin3(struct position* pos_out, struct position* origin, bool random_room);
 uint8_t TickStatusTurnCounter(uint8_t* counter);
+void GetCurvedProjectileTargetPos(struct position* target_pos, struct entity* user);
 void AdvanceFrame(undefined param_1);
 void UnkMapRelatedFunc(int switch_case, undefined4 param_2);
 void AnimateWaterShadows(void);
@@ -300,7 +302,7 @@ void SwapMonsterWanFileIndex(int src_id, int dst_id);
 void LoadMonsterSprite(enum monster_id monster_id, undefined param_2);
 void DeleteMonsterSpriteFile(enum monster_id monster_id);
 void DeleteAllMonsterSpriteFiles(void);
-bool CanMonsterBeAddedToTeam(struct entity* entity);
+bool MonsterCannotBeAddedToTeam(struct entity* entity);
 void EuFaintCheck(bool non_team_member_fainted, bool set_unk_byte);
 void HandleFaint(struct entity* fainted_entity, union damage_source damage_source,
                  struct entity* killer);
@@ -525,9 +527,11 @@ struct entity* GetLeaderIfVisible(struct entity* monster);
 void RunMonsterAi(struct entity* monster, int unused);
 void ApplyDamageAndEffects(struct entity* attacker, struct entity* defender,
                            struct damage_data* damage_data, bool false_swipe, bool exp_on_faint,
-                           union damage_source damage_source, bool defender_response);
+                           union damage_source damage_source, bool defender_response,
+                           bool fissure);
 bool ApplyDamage(struct entity* attacker, struct entity* defender, struct damage_data* damage_data,
-                 bool false_swipe, bool exp_on_faint, union damage_source damage_source);
+                 bool false_swipe, bool exp_on_faint, union damage_source damage_source,
+                 bool fissure);
 bool AftermathCheck(struct entity* attacker, struct entity* defender,
                     union damage_source damage_source);
 enum type_matchup GetTypeMatchupBothTypes(struct entity* attacker, struct entity* defender,
@@ -551,21 +555,21 @@ void CalcRecoilDamageFixed(struct entity* attacker, int fixed_damage, undefined4
                            struct damage_data* damage_out, enum move_id move_id,
                            enum type_id attack_type, union damage_source damage_source,
                            enum damage_message damage_message, undefined4 param_9,
-                           undefined4 param_10);
+                           bool fissure);
 void CalcDamageFixed(struct entity* attacker, struct entity* defender, int fixed_damage,
                      bool exp_on_faint, struct damage_data* damage_out, enum type_id attack_type,
                      enum move_category move_category, union damage_source damage_source,
-                     enum damage_message damage_message, undefined4 param_10, undefined4 param_11);
+                     enum damage_message damage_message, undefined4 param_10, bool fissure);
 void CalcDamageFixedNoCategory(struct entity* attacker, struct entity* defender, int fixed_damage,
                                bool exp_on_faint, struct damage_data* damage_out,
                                enum type_id attack_type, union damage_source damage_source,
                                enum damage_message damage_message, undefined4 param_9,
-                               undefined4 param_10);
+                               bool fissure);
 void CalcDamageFixedWrapper(struct entity* attacker, struct entity* defender, int fixed_damage,
                             bool exp_on_faint, struct damage_data* damage_out,
                             enum type_id attack_type, enum move_category move_category,
                             union damage_source damage_source, enum damage_message damage_message,
-                            undefined4 param_10, undefined4 param_11);
+                            undefined4 param_10, bool fissure);
 void UpdateShopkeeperModeAfterAttack(struct entity* attacker, struct entity* defender);
 void UpdateShopkeeperModeAfterTrap(struct entity* shopkeeper, bool non_team_member);
 void ResetDamageCalcDiagnostics(void);

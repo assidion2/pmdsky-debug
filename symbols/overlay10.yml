@@ -161,6 +161,13 @@ overlay10:
         r0: sprite index in wan_table to load from
         r1: 0 for 8bpp, 1 for 4bpp
         r2: starting palette number for 4bpp
+    - name: TerminateAllEffects
+      address:
+        EU: 0x22BE508
+      description: |-
+        Terminates all currently playing live effects.
+        
+        No params.
     - name: GetEffectAnimationWanOffset
       address:
         EU: 0x22BE7F4
@@ -171,6 +178,13 @@ overlay10:
         
         r0: anim_id
         return: GetEffectAnimation(anim_id)->wan_offset
+    - name: TerminateEffect
+      address:
+        EU: 0x22BE790
+      description: |-
+        Makes the live effect with the given unique id stop playing in the middle of execution.
+        
+        r0: unique id
     - name: PlayEffect
       address:
         EU: 0x22BE900
@@ -196,6 +210,7 @@ overlay10:
       description: |-
         Gets a live effect's index in EFFECT_CONTROL.live_effects from its unique id.
         
+        r0: unique id
         return: index, or -1 if it is not present
     - name: ScreenEffectActive
       address:

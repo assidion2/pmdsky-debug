@@ -1070,6 +1070,14 @@ overlay29:
         
         r0: entity pointer
         r1: Sound effect ID
+    - name: PlayItemThrowSfx
+      address:
+        EU: 0x22E60D8
+      description: |-
+        Plays the appropriate sound effect for throwing an item based on its category.
+        
+        r0: user entity pointer (unused)
+        r1: item category
     - name: PlayMissSfx
       address:
         EU:
@@ -1616,6 +1624,14 @@ overlay29:
         
         r0: pointer to the status turn counter
         return: new counter value
+    - name: GetCurvedProjectileTargetPos
+      address:
+        EU: 0x22EA44C
+      description: |-
+        Gets the position a curved projectile should land at when thrown by the user.
+        
+        r0: [output] position
+        r1: user entity pointer
     - name: AdvanceFrame
       address:
         EU: 0x22EA990
@@ -3093,15 +3109,18 @@ overlay29:
         Note: unverified, ported from Irdkwia's notes
         
         No params.
-    - name: CanMonsterBeAddedToTeam
+    - name: MonsterCannotBeAddedToTeam
+      aliases:
+        - CanMonsterBeAddedToTeam
       address:
         EU: 0x22F81EC
         NA: 0x22F7834
         JP: 0x22F8DF4
       description: |-
-        Returns false if there are already four members on the active team or if the total body size of the team would be greater than 6 if this monster was added.
+        Returns true if there are already four members on the active team or if the total body size of the team would be greater than 6 if this monster was added.
         
         r0: entity pointer
+        return: bool
     - name: EuFaintCheck
       address:
         EU: 0x22F88E8
@@ -5401,6 +5420,7 @@ overlay29:
         stack[0]: experience flag (see ApplyDamage)
         stack[1]: Damage source (see HandleFaint)
         stack[2]: defender response flag. If true, the defender can respond to the attack with various effects. If false, the only post-damage effect that can happen is the Rage attack boost.
+        stack[3]: is fissure
     - name: ApplyDamage
       address:
         EU: 0x2309A0C
@@ -5416,6 +5436,7 @@ overlay29:
         r3: False Swipe flag, causes the defender's HP to be set to 1 if it would otherwise have been 0
         stack[0]: experience flag, controls whether or not experience will be granted upon a monster fainting, and whether enemy evolution might be triggered
         stack[1]: Damage source (see HandleFaint)
+        stack[2]: is fissure
         return: True if the target fainted (reviving does not count as fainting)
     - name: AftermathCheck
       address:
@@ -5591,7 +5612,8 @@ overlay29:
         stack[1]: attack type
         stack[2]: damage source
         stack[3]: damage message
-        others: ?
+        stack[4]: ?
+        stack[5]: is fissure (always 0)
     - name: CalcDamageFixed
       address:
         EU: 0x230DCB4
@@ -5609,7 +5631,8 @@ overlay29:
         stack[2]: move category
         stack[3]: damage source
         stack[4]: damage message
-        others: ?
+        stack[5]: ?
+        stack[6]: is fissure
     - name: CalcDamageFixedNoCategory
       address:
         EU: 0x230DE1C
@@ -5626,7 +5649,8 @@ overlay29:
         stack[1]: attack type
         stack[2]: damage source
         stack[3]: damage message
-        others: ?
+        stack[4]: ?
+        stack[5]: is fissure (always 0)
     - name: CalcDamageFixedWrapper
       address:
         EU: 0x230DE68
@@ -5644,7 +5668,8 @@ overlay29:
         stack[2]: move category
         stack[3]: damage source
         stack[4]: damage message
-        others: ?
+        stack[5]: ?
+        stack[6]: is fissure
     - name: UpdateShopkeeperModeAfterAttack
       address:
         EU: 0x230DEB4
