@@ -176,6 +176,13 @@ overlay10:
         
         r0: unique id
         r1: true if the effect does not have type WAN File 0/1
+    - name: TerminateEffectWrapper
+      address:
+        EU: 0x22BE790
+      description: |-
+        Wrapper for TerminateEffect.
+        
+        r0: unique id
     - name: GetEffectAnimationWanOffset
       address:
         EU: 0x22BE7F4
@@ -186,13 +193,6 @@ overlay10:
         
         r0: anim_id
         return: GetEffectAnimation(anim_id)->wan_offset
-    - name: TerminateEffectWrapper
-      address:
-        EU: 0x22BE790
-      description: |-
-        Wrapper for TerminateEffect.
-        
-        r0: unique id
     - name: PlayEffect
       address:
         EU: 0x22BE900
@@ -3481,3 +3481,9 @@ overlay10:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 10.
+    - name: EFFECT_CONTROL
+      address:
+        EU: 0x22DCB00
+      length:
+        EU: 0x27A4
+      description: The master struct containing information about how effects should be played and the ones that are currently active.

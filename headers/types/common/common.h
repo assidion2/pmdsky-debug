@@ -1744,11 +1744,12 @@ struct effect_control {
     uint32_t next_unique_id;             // 0x2780
     uint32_t is_ground_mode;             // 0x2784
     // 0x2788: Entry in wan_table for file 1 if ground mode, file 292 if dungeon mode
-    uint32_t wan_entry;
+    uint16_t wan_entry;
     undefined field_0x278a;
     undefined field_0x278b;
     undefined4 field_0x278c;
-    undefined field_0x2790[14];
+    undefined2 field_0x2790;
+    undefined field_0x2792[12];
     bool screen_effect_active[2]; // 0x279E: Index 0 is for SCREEN_MAIN, 1 for SCREEN_SUB
     undefined field_0x27a0;
     undefined field_0x27a1;

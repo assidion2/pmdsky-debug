@@ -17,8 +17,8 @@ void CreateInventoryMenuOuter(int n_items, int param_2, int param_3, uint8_t* pa
 void LoadPaletteBase(uint8_t sprite_index, bool is_4bpp, uint8_t start_4bpp);
 void TerminateAllEffects(void);
 void TerminateEffect(int unique_id, bool not_special_wan_file);
-enum wan_offset_type GetEffectAnimationWanOffset(int anim_id);
 void TerminateEffectWrapper(int unique_id);
+enum wan_offset_type GetEffectAnimationWanOffset(int anim_id);
 void PlayEffect(struct live_effect* effect, enum screen screen);
 int GetLiveEffectIdx(int unique_id);
 bool DisplayEffect(struct live_effect* effect, struct vec2_16* camera_pos);
