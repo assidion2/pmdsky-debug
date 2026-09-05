@@ -342,7 +342,7 @@ overlay31:
         EU: 0x10
         NA: 0x10
         JP: 0x10
-      description: "Parameters for the text box created after pressing Info in the stairs menu."
+      description: Parameters for the text box created after pressing Info in the stairs menu.
     - name: DUNGEON_WINDOW_PARAMS_6
       address:
         EU: 0x238AA74

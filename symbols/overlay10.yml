@@ -203,6 +203,14 @@ overlay10:
         
         r0: live_effect
         r1: screen
+    - name: GetLiveEffectIdx
+      address:
+        EU: 0x22BF2E0
+      description: |-
+        Gets a live effect's index in EFFECT_CONTROL.live_effects from its unique id.
+        
+        r0: unique id
+        return: index, or -1 if it is not present
     - name: DisplayEffect
       address:
         EU: 0x22BFE30
@@ -212,14 +220,6 @@ overlay10:
         r0: live_effect
         r1: pixel position of camera
         return: true if the effect's is_non_blocking field is 0, false otherwise
-    - name: GetLiveEffectIdx
-      address:
-        EU: 0x22BF2E0
-      description: |-
-        Gets a live effect's index in EFFECT_CONTROL.live_effects from its unique id.
-        
-        r0: unique id
-        return: index, or -1 if it is not present
     - name: ScreenEffectActive
       address:
         EU: 0x22C0228
