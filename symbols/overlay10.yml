@@ -3481,9 +3481,3 @@ overlay10:
         NA: 0x4
         JP: 0x4
       description: Static initializer for overlay 10.
-    - name: EFFECT_CONTROL
-      address:
-        EU: 0x22DCB00
-      length:
-        EU: 0x27A4
-      description: The master struct containing information about how effects should be played and the ones that are currently active.
