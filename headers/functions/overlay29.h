@@ -551,25 +551,25 @@ void CalcDamage(struct entity* attacker, struct entity* defender, enum type_id a
                 fx32_8 damage_mult_fp, enum move_id move_id, bool full_calc);
 void ApplyDamageAndEffectsWrapper(struct entity* monster, int damage, enum damage_message message,
                                   union damage_source damage_source);
-void CalcRecoilDamageFixed(struct entity* attacker, int fixed_damage, undefined4 param_3,
+void CalcRecoilDamageFixed(struct entity* attacker, int fixed_damage, bool exp_on_faint,
                            struct damage_data* damage_out, enum move_id move_id,
                            enum type_id attack_type, union damage_source damage_source,
-                           enum damage_message damage_message, undefined4 param_9,
+                           enum damage_message damage_message, bool defender_response,
                            bool fissure);
 void CalcDamageFixed(struct entity* attacker, struct entity* defender, int fixed_damage,
                      bool exp_on_faint, struct damage_data* damage_out, enum type_id attack_type,
                      enum move_category move_category, union damage_source damage_source,
-                     enum damage_message damage_message, undefined4 param_10, bool fissure);
+                     enum damage_message damage_message, bool defender_response, bool fissure);
 void CalcDamageFixedNoCategory(struct entity* attacker, struct entity* defender, int fixed_damage,
                                bool exp_on_faint, struct damage_data* damage_out,
                                enum type_id attack_type, union damage_source damage_source,
-                               enum damage_message damage_message, undefined4 param_9,
+                               enum damage_message damage_message, bool defender_response,
                                bool fissure);
 void CalcDamageFixedWrapper(struct entity* attacker, struct entity* defender, int fixed_damage,
                             bool exp_on_faint, struct damage_data* damage_out,
                             enum type_id attack_type, enum move_category move_category,
                             union damage_source damage_source, enum damage_message damage_message,
-                            undefined4 param_10, bool fissure);
+                            bool defender_response, bool fissure);
 void UpdateShopkeeperModeAfterAttack(struct entity* attacker, struct entity* defender);
 void UpdateShopkeeperModeAfterTrap(struct entity* shopkeeper, bool non_team_member);
 void ResetDamageCalcDiagnostics(void);

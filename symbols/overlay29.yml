@@ -5610,7 +5610,7 @@ overlay29:
         
         r0: entity pointer
         r1: fixed damage
-        r2: ?
+        r2: experience flag (see ApplyDamage)
         r3: [output] struct containing info about the damage calculation
         stack[0]: move ID (interestingly, this doesn't seem to be used by the function)
         stack[1]: attack type
