@@ -527,8 +527,7 @@ struct entity* GetLeaderIfVisible(struct entity* monster);
 void RunMonsterAi(struct entity* monster, int unused);
 void ApplyDamageAndEffects(struct entity* attacker, struct entity* defender,
                            struct damage_data* damage_data, bool false_swipe, bool exp_on_faint,
-                           union damage_source damage_source, bool defender_response,
-                           bool fissure);
+                           union damage_source damage_source, bool defender_response, bool fissure);
 bool ApplyDamage(struct entity* attacker, struct entity* defender, struct damage_data* damage_data,
                  bool false_swipe, bool exp_on_faint, union damage_source damage_source,
                  bool fissure);
