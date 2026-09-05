@@ -1701,7 +1701,7 @@ struct live_effect {
     uint32_t effect_id;    // 0x14
     undefined4 field_0x18; // Seemingly always 0
     undefined4 field_0x1c;
-    struct vec2_16 pos;    // 0x20: Absolute pixel coordinates of effect
+    struct vec2_16 pos; // 0x20: Absolute pixel coordinates of effect
     undefined4 field_0x24;
     undefined4 field_0x28;
     undefined4 field_0x2c;

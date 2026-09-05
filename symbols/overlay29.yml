@@ -3340,6 +3340,8 @@ overlay29:
     - name: TryPointCameraToFarOffTeammate
       address:
         EU: 0x22FA24C
+        NA: 0x22F9840
+        JP: 0x22FADF8
       description: |-
         Attempts to place the camera on top of the specified teammate.
         
@@ -5333,6 +5335,8 @@ overlay29:
     - name: ResetTypeChanges
       address:
         EU: 0x230870C
+        NA: 0x2307CE0
+        JP: 0x2309210
       description: |-
         Resets any type changes that the given monster has undergone.
         
@@ -5612,7 +5616,7 @@ overlay29:
         stack[1]: attack type
         stack[2]: damage source
         stack[3]: damage message
-        stack[4]: ?
+        stack[4]: defender response flag (see ApplyDamageAndEffects)
         stack[5]: is fissure (always 0)
     - name: CalcDamageFixed
       address:
@@ -5631,7 +5635,7 @@ overlay29:
         stack[2]: move category
         stack[3]: damage source
         stack[4]: damage message
-        stack[5]: ?
+        stack[5]: defender response flag (see ApplyDamageAndEffects)
         stack[6]: is fissure
     - name: CalcDamageFixedNoCategory
       address:
@@ -5649,7 +5653,7 @@ overlay29:
         stack[1]: attack type
         stack[2]: damage source
         stack[3]: damage message
-        stack[4]: ?
+        stack[4]: defender response flag (see ApplyDamageAndEffects)
         stack[5]: is fissure (always 0)
     - name: CalcDamageFixedWrapper
       address:
@@ -5668,7 +5672,7 @@ overlay29:
         stack[2]: move category
         stack[3]: damage source
         stack[4]: damage message
-        stack[5]: ?
+        stack[5]: defender response flag (see ApplyDamageAndEffects)
         stack[6]: is fissure
     - name: UpdateShopkeeperModeAfterAttack
       address:
