@@ -786,7 +786,7 @@ overlay29:
         
         r0: entity pointer
         r1: Effect ID
-        r2: whether the effect is blocking or not (i.e. whether the function should wait until it is finished or 100 frames have passed to return)
+        r2: if the effect is blocking, whether the function should wait until it is finished or 100 frames have passed to return
         r3: WAN offset on entity sprite to use
         stack[0]: if 2, waits until any in-progress effects are finished before playing the given one; if 1, waits only for blocking effects
         stack[1]: whether to still play the effect even if the entity is using a non-flying two-turn move like Dig or Shadow Force
@@ -803,7 +803,7 @@ overlay29:
         
         r0: Position where the effect should be played
         r1: Effect ID
-        r2: whether the effect is blocking or not (i.e. whether the function should wait until it is finished or 100 frames have passed to return)
+        r2: if the effect is blocking, whether the function should wait until it is finished or 100 frames have passed to return
         return: -1 if the animation is finished / exceeded 100 frames, or a unique id for the playing effect otherwise
     - name: PlayEffectAnimationPixelPos
       address:
@@ -815,7 +815,7 @@ overlay29:
         
         r0: Pixel position where the effect should be played
         r1: Effect ID
-        r2: whether the effect is blocking or not (i.e. whether the function should wait until it is finished or 100 frames have passed to return)
+        r2: if the effect is blocking, whether the function should wait until it is finished or 100 frames have passed to return
         return: -1 if the animation is finished / exceeded 100 frames, or a unique id for the playing effect otherwise
     - name: FinishPlayingEffectAnimations
       aliases:

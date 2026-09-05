@@ -1701,7 +1701,7 @@ struct live_effect {
     uint32_t effect_id;    // 0x14
     undefined4 field_0x18; // Seemingly always 0
     undefined4 field_0x1c;
-    struct vec2_16 coords; // 0x20: pixel coordinates of effect onscreen?
+    struct vec2_16 pos;    // 0x20: Absolute pixel coordinates of effect
     undefined4 field_0x24;
     undefined4 field_0x28;
     undefined4 field_0x2c;
@@ -1718,7 +1718,7 @@ struct live_effect {
     uint8_t is_non_blocking; // 0x60
     uint8_t repeat;          // 0x61: If non-zero, makes the animation repeat a bunch of times
     undefined2 field_0x62;
-    undefined2 field_0x64;
+    int16_t wan_id; // 0x64: Entry in wan_table
     undefined2 field_0x66;
     struct animation_control anim_ctrl; // 0x68
     undefined2 field_0xe4;

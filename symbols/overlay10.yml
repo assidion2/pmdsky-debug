@@ -168,6 +168,14 @@ overlay10:
         Terminates all currently playing live effects.
         
         No params.
+    - name: TerminateEffect
+      address:
+        EU: 0x22BE5FC
+      description: |-
+        Makes the live effect with the given unique id stop playing in the middle of execution.
+        
+        r0: unique id
+        r1: true if the effect does not have type WAN File 0/1
     - name: GetEffectAnimationWanOffset
       address:
         EU: 0x22BE7F4
@@ -178,11 +186,11 @@ overlay10:
         
         r0: anim_id
         return: GetEffectAnimation(anim_id)->wan_offset
-    - name: TerminateEffect
+    - name: TerminateEffectWrapper
       address:
         EU: 0x22BE790
       description: |-
-        Makes the live effect with the given unique id stop playing in the middle of execution.
+        Wrapper for TerminateEffect.
         
         r0: unique id
     - name: PlayEffect
@@ -202,7 +210,7 @@ overlay10:
         Displays the current frame of an effect animation, also handling playing the sound effect if necessary.
         
         r0: live_effect
-        r1: some sort of pixel coordinates (details of use unknown)
+        r1: pixel position of camera
         return: true if the effect's is_non_blocking field is 0, false otherwise
     - name: GetLiveEffectIdx
       address:

@@ -58,12 +58,12 @@ bool ItemIsActive(struct entity* entity, enum item_id item_id);
 int GetVisibilityRange(void);
 void RevealWholeFloor(struct entity* entity);
 bool DungeonScreenEffectActive(void);
-int PlayEffectAnimationEntity(struct entity* entity, int effect_id, bool blocking,
+int PlayEffectAnimationEntity(struct entity* entity, int effect_id, bool wait,
                               enum wan_offset_type wan_offset, uint8_t finish_cur_effects_first,
                               bool play_if_two_turn_invisible, enum direction_id effect_dir,
                               uint16_t* custom_oam_adjustment_info);
-int PlayEffectAnimationPos(struct position* pos, int effect_id, bool blocking);
-int PlayEffectAnimationPixelPos(struct pixel_position* pixel_pos, int effect_id, bool blocking);
+int PlayEffectAnimationPos(struct position* pos, int effect_id, bool wait);
+int PlayEffectAnimationPixelPos(struct pixel_position* pixel_pos, int effect_id, bool wait);
 void FinishPlayingEffectAnimations(bool wait_for_non_blocking);
 void CopyStatusIconFlags(struct status_icon_flags* dst, struct entity* src);
 void UpdateStatusIconFlags(struct entity* entity);
