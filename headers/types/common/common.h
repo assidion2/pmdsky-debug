@@ -1711,7 +1711,7 @@ struct live_effect {
     int file_index;                       // 0x44: File index in pack 3 (effect.bin)
     uint32_t palette_num;                 // 0x48
     undefined4 field_0x4c;
-    undefined4 field_0x50;
+    uint32_t animation_index; // 0x50: See struct effect_animation
     undefined4 field_0x54;
     int se_id;               // 0x58
     undefined4 field_0x5c;   // Seemingly always 0
@@ -1732,7 +1732,7 @@ struct live_effect {
     undefined2 field_0x130;
     undefined2 field_0x132;
     undefined2 field_0x134;
-    struct vec2_16 field_0x136;
+    struct vec2_16 delta_pos; // 0x136: Values to add every frame to pos
     undefined field_0x13a;
     undefined field_0x13b;
 };
