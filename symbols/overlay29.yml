@@ -773,7 +773,8 @@ overlay29:
       description: |-
         Returns true if there is no darkness on the floor, i.e. if the camera entity doesn't have the dropeye status and either one of dungeon::display_data::luminous or dungeon::display_data::natural_lighting is true.
         
-        r0: bool
+        r0: display_data pointer
+        return: bool
     - name: DungeonScreenEffectActive
       address:
         EU: 0x22E3F30
