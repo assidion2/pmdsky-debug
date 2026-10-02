@@ -921,7 +921,7 @@ struct display_data {
     bool unk_fade_to_black_tracker;
     undefined field_0x32;   // 0x32: Initialized to 0
     undefined field_0x33;   // 0x33: Initialized to 0
-    undefined field_0x34;   // 0x34: Is used, related to lighting?
+    bool dropeye;           // 0x34: True if the camera entity has the dropeye status
     bool team_menu_or_grid; // 0x35: True when the team menu is opened or while Y is being held
     // Derived from internal direction in leader info block
     struct direction_id_8 leader_target_direction;        // 0x36

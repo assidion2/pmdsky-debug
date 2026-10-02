@@ -767,6 +767,13 @@ overlay29:
         More specifically, sets dungeon::display_data::luminous to 1, sets visibility_flags::f_revealed for all tiles on the floor, calls UpdateCamera, UpdateTrapsVisibility, UpdateMinimap and logs the message "It became brighter on the floor!".
         
         r0: Pointer to the entity who revealed the floor
+    - name: IsFloorIlluminated
+      address:
+        EU: 0x22E3EE4
+      description: |-
+        Returns true if there is no darkness on the floor, i.e. if the camera entity doesn't have the dropeye status and either one of dungeon::display_data::luminous or dungeon::display_data::natural_lighting is true.
+        
+        r0: bool
     - name: DungeonScreenEffectActive
       address:
         EU: 0x22E3F30

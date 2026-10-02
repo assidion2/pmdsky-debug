@@ -57,6 +57,7 @@ void UpdateCamera(undefined param_1);
 bool ItemIsActive(struct entity* entity, enum item_id item_id);
 int GetVisibilityRange(void);
 void RevealWholeFloor(struct entity* entity);
+bool IsFloorIlluminated(struct display_data* display_data);
 bool DungeonScreenEffectActive(void);
 int PlayEffectAnimationEntity(struct entity* entity, int effect_id, bool wait,
                               enum wan_offset_type wan_offset, uint8_t finish_cur_effects_first,
