@@ -239,6 +239,16 @@ overlay10:
         r1: effect_display_info
         r2: screen
         return: unique id
+    - name: InitAndPlayEffectWithChecks
+      address:
+        EU: 0x22BF0C0
+      description: |-
+        Calls InitAndPlayEffect with the given parameters if certain checks pass, otherwise either returns -1 or plays a placeholder effect (ID 8).
+        
+        r0: ?
+        r1: effect_display_info
+        r2: screen
+        return: unique id
     - name: GetLiveEffectIdx
       address:
         EU: 0x22BF2E0
