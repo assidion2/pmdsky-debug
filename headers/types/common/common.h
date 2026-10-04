@@ -1712,6 +1712,8 @@ ASSERT_SIZE(struct effect_display_info, 44);
 // Represents an effect animation that is currently playing
 struct live_effect {
     enum screen screen; // 0x0
+    // 0x4: Seemingly always nonzero for all playing effects. In dungeon mode, the only
+    // check for a specific value is seemingly for 6 at 0x22C0508 [EU].
     undefined4 field_0x4;
     enum effect_file_type file_type; // 0x8
     int unique_id;                   // 0xC: -1 if no effect playing
