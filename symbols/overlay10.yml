@@ -274,6 +274,17 @@ overlay10:
         Initializes an effect_display_info struct with default values.
         
         r0: [output] effect_display_info
+    - name: InitAndPlayEffectSetWanOffset
+      address:
+        EU: 
+          - 0x22BFBF4
+          - 0x22BFC24
+      description: |-
+        Calls InitAndPlayEffectWithChecks with r0 = 7, also setting effect_display_info's wan_offset field to the default one for its effect_id.
+        
+        r1: effect_display_info
+        r2: screen
+        return: unique id
     - name: GetLiveEffect
       address:
         EU: 0x22BFC54

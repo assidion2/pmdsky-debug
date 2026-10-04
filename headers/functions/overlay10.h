@@ -29,6 +29,8 @@ int InitAndPlayEffectWithChecks(undefined4 param_1, struct effect_display_info* 
                                 enum screen screen);
 int GetLiveEffectIdx(int unique_id);
 enum wan_offset_type GetLiveEffectWanOffset(int unique_id);
+int InitAndPlayEffectSetWanOffset(undefined4 param_1, struct effect_display_info* effect_display_info,
+                                  enum screen screen);
 void InitEffectDisplayInfo(struct effect_display_info* effect_display_info);
 struct live_effect* GetLiveEffect(int unique_id);
 bool DisplayEffect(struct live_effect* effect, struct vec2_16* camera_pos);
