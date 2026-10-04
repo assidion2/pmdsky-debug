@@ -282,8 +282,8 @@ overlay10:
       description: |-
         Calls InitAndPlayEffectWithChecks with r0 = 7, also setting effect_display_info's wan_offset field to the default value for its effect_id.
         
-        r1: effect_display_info
-        r2: screen
+        r0: effect_display_info
+        r1: screen
         return: unique id
     - name: GetLiveEffect
       address:
