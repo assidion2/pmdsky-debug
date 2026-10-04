@@ -1764,7 +1764,8 @@ struct effect_control {
     undefined field_0x2792;
     undefined field_0x2793;
     undefined4 field_0x2794;
-    undefined field_0x2798[6];
+    undefined4 field_0x2798;
+    undefined2 field_0x279c;
     bool screen_effect_active[2]; // 0x279E: Index 0 is for SCREEN_MAIN, 1 for SCREEN_SUB
     undefined field_0x27a0;
     undefined field_0x27a1;
