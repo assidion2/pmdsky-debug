@@ -25,8 +25,7 @@ int InitEffect(undefined4 param_1, struct effect_display_info* effect_display_in
                enum screen screen);
 int InitAndPlayEffect(undefined4 param_1, struct effect_display_info* effect_display_info,
                       enum screen screen);
-int InitAndPlayEffectWithChecks(undefined4 param_1,
-                                struct effect_display_info* effect_display_info,
+int InitAndPlayEffectWithChecks(undefined4 param_1, struct effect_display_info* effect_display_info,
                                 enum screen screen);
 int GetLiveEffectIdx(int unique_id);
 enum wan_offset_type GetLiveEffectWanOffset(int unique_id);
