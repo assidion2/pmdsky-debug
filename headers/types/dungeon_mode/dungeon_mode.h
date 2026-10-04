@@ -2624,7 +2624,8 @@ struct data_serializer {
 };
 ASSERT_SIZE(struct data_serializer, 12);
 
-// Information about an effect animation currently being played on a monster as part of a move
+// Information about an effect animation currently being played on a monster as part of a move.
+// Not used for effects that are not tied to any monster, such as projectiles.
 struct monster_move_animation {
     int live_effect_unique_id; // 0x0
     undefined4 field_0x4;
