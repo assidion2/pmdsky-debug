@@ -276,11 +276,18 @@ overlay10:
         r0: [output] effect_display_info
     - name: InitAndPlayEffectSetWanOffset
       address:
-        EU:
-          - 0x22BFBF4
-          - 0x22BFC24
+        EU: 0x22BFBF4
       description: |-
         Calls InitAndPlayEffectWithChecks with r0 = 7, also setting effect_display_info's wan_offset field to the default value for its effect_id.
+        
+        r0: effect_display_info
+        r1: screen
+        return: unique id
+    - name: InitEffectSetWanOffset
+      address:
+        EU: 0x22BFC24
+      description: |-
+        Calls InitEffect with r0 = 7, also setting effect_display_info's wan_offset field to the default value for its effect_id.
         
         r0: effect_display_info
         r1: screen
