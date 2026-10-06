@@ -67,6 +67,7 @@ int PlayEffectAnimationPos(struct position* pos, int effect_id, bool wait);
 int PlayEffectAnimationPixelPos(struct pixel_position* pixel_pos, int effect_id, bool wait);
 void FinishPlayingEffectAnimations(bool wait_for_non_blocking);
 void CopyStatusIconFlags(struct status_icon_flags* dst, struct entity* src);
+void UpdateStatusIconFlagsAllMonsters(bool set_field_0x156);
 void UpdateStatusIconFlags(struct entity* entity);
 void PlayQuestionMarkEffect(struct entity* entity);
 void PlayExclamationPointEffect(struct entity* entity);

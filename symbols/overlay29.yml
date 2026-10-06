@@ -846,6 +846,13 @@ overlay29:
         
         r0: [output] status_icon_flags
         r1: entity pointer
+    - name: UpdateStatusIconFlagsAllMonsters
+      address:
+        EU: 0x22E4408
+      description: |-
+        Calls UpdateStatusIconFlags on all monsters on the floor.
+        
+        r0: whether to also set field_0x156 of all monster structs (always 0 in practice)
     - name: UpdateStatusIconFlags
       address:
         EU: 0x22E4464
