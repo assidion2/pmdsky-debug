@@ -8422,7 +8422,7 @@ overlay29:
         r0: pointer to list of targets
         r1: attacker pointer
         r2: pointer to move data
-        r3: ?
+        r3: item id
         stack[0]: ?
     - name: DoMoveDamageInlined
       address:
