@@ -867,6 +867,7 @@ void PlayMoveAnimation(struct entity* user, struct entity* target, struct move* 
 uint16_t GetMoveAnimationId(struct move* move, enum weather_id apparent_weather,
                             bool should_play_alternative_animation);
 bool ShouldMovePlayAlternativeAnimation(struct entity* user, struct move* move);
+bool IsMoveBlockedByTerrain(struct entity* user, struct move* move);
 void ExecuteMoveEffect(struct target_list* targets, struct entity* attacker, struct move* move,
                        undefined4 param_4, undefined4 param_5);
 bool DoMoveDamageInlined(struct entity* attacker, struct entity* defender, struct move* move,

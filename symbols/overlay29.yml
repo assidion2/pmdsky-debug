@@ -8397,11 +8397,20 @@ overlay29:
         NA: 0x2325C78
         JP: 0x2327104
       description: |-
-        Checks whether a moved used by a monster should play its alternative animation. Includes checks for Curse, Snore, Sleep Talk, Solar Beam and 2-turn moves.
+        Checks whether a move used by a monster should play its alternative animation. Includes checks for Curse, Snore, Sleep Talk, Solar Beam and 2-turn moves.
         
         r0: Pointer to the entity that used the move
         r1: Move pointer
         return: True if the move should play its alternative animation
+    - name: IsMoveBlockedByTerrain
+      address:
+        EU: 0x2326788
+      description: |-
+        If the monster is using Dig or Dive, checks whether the terrain of the tile the monster is standing on blocks the use of the move.
+        
+        r0: Pointer to the entity that used the move
+        r1: Pointer to move being used
+        return: True if the monster cannot use the move because of the terrain
     - name: ExecuteMoveEffect
       address:
         EU: 0x232F2A4
