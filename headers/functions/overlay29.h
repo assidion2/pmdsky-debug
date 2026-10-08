@@ -51,6 +51,7 @@ void PopulateActiveMonsterPtrs(void);
 int GetTeamMemberIndex(struct entity* monster);
 void GetMonsterOrTrapName(char* buffer, struct entity* entity);
 void SubstitutePlaceholderStringTags(int string_id, struct entity* entity, undefined4 param_3);
+bool IsPositionVisibleAndOnScreen(struct position* position);
 bool UpdateMapSurveyorFlag(void);
 void PointCameraToMonster(struct entity* entity, bool update_trap_vis_and_map);
 void UpdateCamera(undefined param_1);

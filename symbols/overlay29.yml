@@ -666,6 +666,14 @@ overlay29:
         r0: string ID (unclear what this means)
         r1: entity pointer
         r2: unused
+    - name: IsPositionVisibleAndOnScreen
+      address:
+        EU: 0x22E3624
+      description: |-
+        Returns true if the position is within 6 tiles in the x direction and 5 tiles in the y direction from the camera target, and if either IsPositionActuallyInSight returns true for the position or the floor is without darkness.
+        
+        r0: position pointer
+        return: bool
     - name: UpdateMapSurveyorFlag
       address:
         EU: 0x22E375C
