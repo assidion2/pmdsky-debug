@@ -661,7 +661,7 @@ void UpdateWindow(int window_id);
 void ClearWindow(int window_id);
 void DeleteWindow(int window_id);
 void GetWindowRectangle(int window_id, struct window_rectangle* rect_out);
-void* GetWindowContents(int window_id);
+union window_contents GetWindowContents(int window_id);
 void LoadCursors(void);
 void InitWindowTrailer(struct window_trailer* trailer);
 uint8_t LoadPrevMenuItem(int menu_id);
