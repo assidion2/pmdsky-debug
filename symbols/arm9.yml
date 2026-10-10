@@ -12912,6 +12912,16 @@ arm9:
         
         r0: ?
         return: bool: whether the number of missions completed is greater than 0
+    - name: GetUnfulfilledMissionRestrictions
+      address:
+        EU: 0x205F1BC
+      description: |-
+        Checks if the player's party doesn't meet the restrictions for their active missions for the given dungeon, and outputs their values if so.
+        
+        r0: dungeon id
+        r1: [output] type id of an unfulfilled type restriction
+        r2: [output] monster id of an unfulfilled monster restriction
+        return: whether at least one unfulfilled mission restriction was found for this dungeon id
     - name: AddMissionToJobList
       address:
         EU: 0x205F434

@@ -1349,6 +1349,8 @@ int CountJobListMissions(void);
 int DungeonRequestsDone(uint8_t param_1, bool param_2);
 int DungeonRequestsDoneWrapper(uint8_t param_1);
 bool AnyDungeonRequestsDone(uint8_t param_1);
+bool GetUnfulfilledMissionRestrictions(enum dungeon_id dungeon_id, struct type_id_16* type_id,
+                                       struct monster_id_16* monster_id);
 bool AddMissionToJobList(struct mission* mission);
 struct mission* GetAcceptedMission(uint8_t mission_id);
 bool IsAcceptedMissionSlotEmpty(int32_t mission_slot);
