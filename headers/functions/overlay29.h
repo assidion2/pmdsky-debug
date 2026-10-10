@@ -101,6 +101,7 @@ void PlayEffectAnimation0x1A9(struct entity* entity);
 void PlayEffectAnimation0x29(struct entity* entity);
 void PlayEffectAnimation0x18E(struct entity* entity);
 void PlayKeyDoorUnlockEffect(struct entity* entity, bool is_not_treasure_memo);
+void PlayEscapeEffect(int effect_id, struct entity* entity, undefined4 param_3);
 void PlayStairSensorArrowEffect(struct entity* entity, enum direction_id arrow_dir);
 void InitMonsterMoveEffect(int live_effect_unique_id, struct entity* entity, undefined4 param_3);
 void FreeMonsterMoveEffects(void);
