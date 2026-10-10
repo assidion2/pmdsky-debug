@@ -12916,7 +12916,7 @@ arm9:
       address:
         EU: 0x205F1BC
       description: |-
-        Checks if the player's party doesn't meet the restrictions for missions they have active for the given dungeon, and outputs their values if so.
+        Checks if the player's party doesn't meet the restrictions for missions they have active in the given dungeon, and outputs their values if so.
         
         r0: dungeon id
         r1: [output] type id of an unfulfilled type restriction
