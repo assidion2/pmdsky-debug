@@ -8958,6 +8958,15 @@ overlay29:
         Note: unverified, ported from Irdkwia's notes
         
         return: monster ID?
+    - name: GetSurroundingEnemies
+      address:
+        EU: 0x2338CCC
+      description: |-
+        Gets a list of up to 8 hostile entities surrounding the user. Used in-game for Metal Burst.
+        
+        r0: user entity pointer
+        r1: [output] target entity pointer array
+        return: number of hostile entities in the array
     - name: NearbyAllyIqSkillIsEnabled
       address:
         EU: 0x2338E58
