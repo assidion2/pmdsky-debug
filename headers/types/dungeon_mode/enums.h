@@ -1505,7 +1505,6 @@ enum shadow_type {
 };
 
 enum status_icon {
-    STATUS_ICON_UNK = 0,
     STATUS_ICON_SLEEPLESS = 1,    // Blue eye blinking yellow
     STATUS_ICON_BURN = 2,         // Red flame
     STATUS_ICON_POISON = 3,       // White skull
