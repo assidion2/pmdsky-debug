@@ -10,7 +10,7 @@ void DisplayStatusIcon(struct monster_status_icon_info* monster_status_icon_info
 void DisplayBottomScreenStatusIcon(int unique_id, enum status_icon status_icon,
                                    struct vec2_16* monster_pixel_pos,
                                    struct vec2_16* camera_pixel_pos, enum monster_id apparent_id);
-void AnimateStatusIconType(enum status_icon_type status_icon_type);
+void AnimateStatusIconType(enum status_icon_type status_icon_type, undefined param_2);
 void LoadStatusIcons(void);
 void FillMonsterStatusIconInfo(int unique_id, enum monster_id apparent_id,
                                uint32_t status_icon_flags1, uint32_t status_icon_flags2,
