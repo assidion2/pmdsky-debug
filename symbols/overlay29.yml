@@ -22,7 +22,7 @@ overlay29:
       address:
         EU: 0x22DD0CC
       description: |-
-        Returns a pointer the monster_status_icon_info struct corresponding to the given unique id, or null if none was found.
+        Returns a pointer to the monster_status_icon_info struct corresponding to the given unique id, or null if none was found.
         
         r0: unique id of monster
         return: monster_status_icon_info pointer
