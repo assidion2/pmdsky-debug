@@ -30,7 +30,7 @@ overlay29:
       address:
         EU: 0x22DD124
       description: |-
-        Gets the status icon corresponding to the rightmost bit set in either current_status_icon.
+        Gets the status icon corresponding to the lone bit set across both current_status_icon parameters.
         
         r0: head current_status_icon
         r1: center current_status_icon
@@ -12272,7 +12272,7 @@ overlay29:
       address:
         EU: 0x2351B98
       length:
-        EU: 0x108
+        EU: 0x110
       description: Array mapping status icon enums to structs containing the shape and palette to use for the icon.
     - name: DEOXYS_FORMS
       address:

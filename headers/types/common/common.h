@@ -122,13 +122,14 @@ struct mem_arena_getters {
 };
 ASSERT_SIZE(struct mem_arena_getters, 8);
 
-typedef void (*menu_gateway_fn_t)(void);
+typedef bool (*menu_entry_fn_t)(void);
+typedef void (*menu_exit_fn_t)(void);
 typedef int (*menu_update_fn_t)(void);
 
 struct menu_load_entry {
     enum overlay_group_id group;   // 0x0
-    menu_gateway_fn_t entrypoint;  // 0x4
-    menu_gateway_fn_t destructor;  // 0x8
+    menu_entry_fn_t entrypoint;    // 0x4
+    menu_exit_fn_t destructor;     // 0x8
     menu_update_fn_t frame_update; // 0xC
 };
 ASSERT_SIZE(struct menu_load_entry, 16);

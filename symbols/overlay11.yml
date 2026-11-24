@@ -1615,6 +1615,13 @@ overlay11:
         Checks if the bag has at least one valid item. Notably used in CreateTopGroundMenu to decide if the "Items" option should be enabled.
         
         return: bool
+    - name: InitBagMenu
+      address:
+        EU: 0x230547C
+      description: |-
+        Opens the bag menu.
+        
+        No params.
     - name: SprintfStatic
       address:
         EU: 0x2309868
