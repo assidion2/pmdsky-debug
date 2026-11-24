@@ -173,8 +173,8 @@ undefined4 GroundBagOthersMenuFrameUpdate(void);
 undefined4 InitDiaryAndFaqBoardMenu(undefined4 param_1);
 void FreeDiaryAndFaqBoardMenuMenu(void);
 undefined4 DiaryAndFaqBoardMenuFrameUpdate(void);
-void InitBagMenu(void);
 bool IsBagNotEmpty(void);
+void InitBagMenu(void);
 bool IsGroundMonsterAtMaxLevel(struct ground_monster* ground_monster);
 void GetExclusiveItemRequirements(undefined param_1, undefined param_2);
 void SwapShopInventoryManager(enum swap_shop_inventory_case inventory_case,
