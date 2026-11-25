@@ -809,18 +809,18 @@ ram:
         The block array for GROUND_MEMORY_ARENA_1.
         
         type: struct mem_block[52]
-    - name: GROUND_MEMORY_ARENA_1_MEMORY
-      address:
-        NA: 0x23254BC
-      length:
-        NA: 0x63B04
-      description: The memory region for GROUND_MEMORY_ARENA_1.
     - name: STATUS_ICON_CONTROL
       address:
         EU: 0x236DAF0
       length:
         EU: 0x6FC
       description: The master struct controlling the display of status icons.
+    - name: GROUND_MEMORY_ARENA_1_MEMORY
+      address:
+        NA: 0x23254BC
+      length:
+        NA: 0x63B04
+      description: The memory region for GROUND_MEMORY_ARENA_1.
     - name: SENTRY_DUTY_STRUCT
       address:
         NA: 0x237A5D0
