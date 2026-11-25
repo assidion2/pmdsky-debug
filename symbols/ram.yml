@@ -815,6 +815,12 @@ ram:
       length:
         NA: 0x63B04
       description: The memory region for GROUND_MEMORY_ARENA_1.
+    - name: STATUS_ICON_CONTROL
+      address:
+        EU: 0x236DAF0
+      length:
+        EU: 0x6FC
+      description: The master struct controlling the display of status icons.
     - name: SENTRY_DUTY_STRUCT
       address:
         NA: 0x237A5D0

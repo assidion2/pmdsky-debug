@@ -69,7 +69,7 @@ overlay29:
       address:
         EU: 0x22DDEF4
       description: |-
-        Loads SYSTEM/manpu_su.sma (which contains data for how status icons should be displayed) onto the heap, and loads its palettes into VRAM.
+        Loads SYSTEM/manpu_su.sma (which contains data for how status icons should be displayed) into memory, and loads its palettes into VRAM.
         
         For documentation of the file, see https://github.com/SkyTemple/skytemple-files/tree/5ed359a2560a1f04666b9ea02b71649b89cb16d7/skytemple_files/graphics/sma
         
