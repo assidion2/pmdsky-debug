@@ -800,6 +800,12 @@ ram:
         Including the allocator metadata, this arena occupies 0x64000 bytes of space.
         
         type: struct mem_arena
+    - name: STATUS_ICON_CONTROL
+      address:
+        EU: 0x236DAF0
+      length:
+        EU: 0x6FC
+      description: The master struct controlling the display of status icons.
     - name: GROUND_MEMORY_ARENA_1_BLOCKS
       address:
         NA: 0x2324FDC
@@ -809,12 +815,6 @@ ram:
         The block array for GROUND_MEMORY_ARENA_1.
         
         type: struct mem_block[52]
-    - name: STATUS_ICON_CONTROL
-      address:
-        EU: 0x236DAF0
-      length:
-        EU: 0x6FC
-      description: The master struct controlling the display of status icons.
     - name: GROUND_MEMORY_ARENA_1_MEMORY
       address:
         NA: 0x23254BC
