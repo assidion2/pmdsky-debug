@@ -1227,14 +1227,6 @@ overlay29:
         
         r0: attacker entity pointer (unused)
         r1: defender entity pointer
-    - name: PlayWeatherEffectAnimation
-      address:
-        EU: 0x22E6998
-      description: |-
-        Plays the screen effect for a new weather activating on the floor.
-        
-        r0: weather id
-        r1: ? (controls whether to use WEATHER_VFX_TABLE or WEATHER_VFX_TABLE_2, even though both are the same in practice)
     - name: PlayStairsSfx
       address:
         EU: 0x22E6718
@@ -1254,6 +1246,14 @@ overlay29:
         
         r0: entity pointer
         return: bool
+    - name: PlayWeatherEffectAnimation
+      address:
+        EU: 0x22E6998
+      description: |-
+        Plays the screen effect for a new weather activating on the floor.
+        
+        r0: weather id
+        r1: ? (controls whether to use WEATHER_VFX_TABLE or WEATHER_VFX_TABLE_2, even though both are the same in practice)
     - name: PlayEffectAnimation0x1A9
       address:
         EU:
