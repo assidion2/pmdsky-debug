@@ -8738,7 +8738,7 @@ overlay29:
         EU: 0x23357E8
       description: |-
         Resets fields related to the weather in the dungeon struct and sets its weather and natural_weather fields to the given id.
-
+        
         Also resets the Mud Sport and Water Sport turn counters.
         
         r0: weather id
