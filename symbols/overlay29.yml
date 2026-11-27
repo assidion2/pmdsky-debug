@@ -12392,7 +12392,7 @@ overlay29:
         EU: 0x2351E38
       length:
         EU: 0x20
-      description: Same as WEATHER_VFX_TABLE, with the only difference being that rain uses effect 0x1B8 instead of 0x10 (even though both are enirely the same?).
+      description: "Copy of WEATHER_VFX_TABLE, with the only difference being that rain uses effect 0x1B8 instead of 0x10 (even though both are entirely the same?)."
     - name: STATUS_ICON_ARRAY_BLINDED
       address:
         EU: 0x2351E78
