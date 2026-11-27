@@ -779,7 +779,8 @@ struct spawn_flags {
     bool f_item : 1;
     bool f_trap : 1;
     bool f_monster : 1;
-    uint16_t spawn_flags_unk4 : 12;
+    bool f_smashed : 1; // About to be smashed by Absolute Mover
+    uint16_t spawn_flags_unk4 : 11;
 };
 ASSERT_SIZE(struct spawn_flags, 2);
 

@@ -1227,6 +1227,14 @@ overlay29:
         
         r0: attacker entity pointer (unused)
         r1: defender entity pointer
+    - name: PlayWeatherEffectAnimation
+      address:
+        EU: 0x22E6998
+      description: |-
+        Plays the screen effect for a new weather activating on the floor.
+        
+        r0: weather id
+        r1: ? (controls whether to use WEATHER_VFX_TABLE or WEATHER_VFX_TABLE_2, even though both are the same in practice)
     - name: PlayStairsSfx
       address:
         EU: 0x22E6718
@@ -8718,6 +8726,29 @@ overlay29:
         
         r0: entity pointer
         return: weather ID
+    - name: SetNewFloorWeather
+      address:
+        EU: 0x2335798
+      description: |-
+        Sets the weather for a new floor.
+        
+        return: true if the weather changed
+    - name: InitNaturalWeather
+      address:
+        EU: 0x23357E8
+      description: |-
+        Resets fields related to the weather in the dungeon struct and sets its weather and natural_weather fields to the given id.
+
+        Also resets the Mud Sport and Water Sport turn counters.
+        
+        r0: weather id
+    - name: HandleWeatherFormChanges
+      address:
+        EU: 0x2335A84
+      description: |-
+        Calls TryWeatherFormChange on all monsters on the floor. Also displays the message for a weather change if applicable.
+        
+        r0: whether to display the weather text
     - name: TryWeatherFormChange
       address:
         EU: 0x2335BB0
@@ -9023,6 +9054,21 @@ overlay29:
         
         r0: Wall position to smash
         return: bool
+    - name: PrepareAbsoluteMoverSmash
+      address:
+        EU: 0x233889C
+      description: |-
+        If the tile at the given position is a wall, marks it as about to be smashed by Absolute Mover and updates its walkable neighbors.
+        
+        r0: Wall position to smash
+        return: bool
+    - name: AbsoluteMoverSmashWall
+      address:
+        EU: 0x2338938
+      description: |-
+        Checks if the flag set by PrepareAbsoluteMoverSmash is active and if so, smashes the wall.
+        
+        r0: Wall position to smash
     - name: IsTileGround
       address:
         EU: 0x23389FC
@@ -12302,6 +12348,12 @@ overlay29:
         EU: 0x10
         NA: 0x10
       description: "Array of bit masks used to set monster::status_icon. Indexed by monster::statuses::magnet_rise * 8. See UpdateStatusIconFlags for details."
+    - name: WEATHER_SFX_TABLE
+      address:
+        EU: 0x2351DE8
+      length:
+        EU: 0x10
+      description: Table indexed by weather id for the sound effects to play upon a weather change.
     - name: STATUS_ICON_ARRAY_MIRACLE_EYE
       address:
         EU: 0x2351DF8
@@ -12329,6 +12381,18 @@ overlay29:
         EU: 0x18
         NA: 0x18
       description: "Array of bit masks used to set monster::status_icon. Indexed by monster::statuses::long_toss * 8. See UpdateStatusIconFlags for details."
+    - name: WEATHER_VFX_TABLE
+      address:
+        EU: 0x2351E38
+      length:
+        EU: 0x20
+      description: Table indexed by weather id for the effect animations to play upon a weather change.
+    - name: WEATHER_VFX_TABLE_2
+      address:
+        EU: 0x2351E38
+      length:
+        EU: 0x20
+      description: Same as WEATHER_VFX_TABLE, with the only difference being that rain uses effect 0x1B8 instead of 0x10 (even though both are enirely the same?).
     - name: STATUS_ICON_ARRAY_BLINDED
       address:
         EU: 0x2351E78
