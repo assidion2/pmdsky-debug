@@ -40,6 +40,7 @@ bool JumpToTitleScreen(int arg);
 bool ReturnToTitleScreen(uint32_t fade_duration);
 void ScriptSpecialProcess0x16(bool param_1);
 bool IsScreenFadeInProgress(void);
+void RenderScreenFadeGroundMode(int alpha);
 void LoadBackgroundAttributes(struct bg_list_entry* entry, int bg_id);
 void GroundBgInit(struct ground_bg* ground_bg, const struct ground_bg_sub_struct_2bc* param_2);
 void GroundBgFreeAll(struct ground_bg* ground_bg);

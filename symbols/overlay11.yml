@@ -404,6 +404,13 @@ overlay11:
         Used for example in the handler functions of the top screen types in ground mode to check whether the top screen fade is complete or not.
         
         return: True if the top screen is still fading, false if it's done fading.
+    - name: RenderScreenFadeGroundMode
+      address:
+        EU: 0x22EB14C
+      description: |-
+        Renders the 3D object for a screen fade.
+        
+        r0: If negative, fades to black; if positive, fades to white. The alpha transparency value will be min(0xff, abs(r0)).
     - name: LoadBackgroundAttributes
       address:
         EU: 0x22EC480
