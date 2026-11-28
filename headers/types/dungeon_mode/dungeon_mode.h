@@ -280,7 +280,7 @@ struct status_icon_flags {
     bool f_curse : 1;                // Red skull
     bool f_embargo : 1;              // Yellow exclamation mark. Also for gastro acid and snatch
     bool f_sure_shot : 1;            // Blue sword blinking yellow
-    bool f_whiffer : 1;              // 2 green arrows in circle (same as cowering)
+    bool f_whiffer : 1;              // 2 green arrows in circle
     bool f_set_damage : 1;           // Blue sword blinking red
     bool f_focus_energy : 1;         // Red sword blinking yellow
     bool f_blinded : 1;              // Blue eye with an X

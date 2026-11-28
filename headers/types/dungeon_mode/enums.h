@@ -1524,7 +1524,7 @@ enum status_icon {
     STATUS_ICON_CURSE = 15,           // Red skull
     STATUS_ICON_EMBARGO = 16,         // Yellow exclamation mark. Also for gastro acid and snatch
     STATUS_ICON_SURE_SHOT = 17,       // Blue sword blinking yellow
-    STATUS_ICON_WHIFFER = 18,         // 2 green arrows in circle (same as cowering)
+    STATUS_ICON_WHIFFER = 18,         // 2 green arrows in circle
     STATUS_ICON_SET_DAMAGE = 19,      // Blue sword blinking red
     STATUS_ICON_FOCUS_ENERGY = 20,    // Red sword blinking yellow
     STATUS_ICON_BLINDED = 21,         // Blue eye with an X
